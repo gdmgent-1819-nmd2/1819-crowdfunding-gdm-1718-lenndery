@@ -21,7 +21,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/sponsor">sponsor</span></a>
             </li>
             <li class="nav-item">
@@ -39,6 +39,24 @@
         </ul>
     </div>
 </nav>
+
+<style>
+    .nav-item > a[href$="/sponsor"] {
+        position: relative !important;
+        color: black !important;
+        font-weight: bolder !important;
+    }
+
+    .nav-item > a[href$="/sponsor"]::after {
+        position: absolute !important;
+        bottom: -1px !important;
+        left: 50% !important;
+        height: 7px !important;
+        width: 7px !important;
+        border-radius: 120px !important;
+        background-color: var(--primary) !important;
+    }
+</style>
         <div class="jumbotron jumbotron-fluid page-title">
     <div class="container animated slideInUp faster">
         <h1 class="display-5">Sponsor</h1>

@@ -25,7 +25,8 @@
 a {
   all: unset;
   text-decoration: none;
-  user-select: none !important; }
+  user-select: none !important;
+  cursor: pointer; }
 
 a:hover {
   text-decoration: none; }
@@ -451,6 +452,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   background: url(../../assets/images/css/sprite_rating.svg);
   background-repeat: no-repeat;
   height: 24px;
+  max-height: 24px;
   width: 100px;
   background-size: cover;
   background-position-y: -10%; }
@@ -675,7 +677,8 @@ ul.navbar-nav .nav-link {
   height: 3px;
   width: 20px;
   background-color: var(--accent-grey);
-  border-radius: 120px; }
+  background-color: black;
+  border-radius: 0px; }
 
 .navbar-toggler-horz {
   transform: rotate(-180deg);
@@ -707,13 +710,10 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   color: white; }
 
 #carousel-packing .carousel-nav {
-  display: flex;
-  flex-direction: row;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
-  width: 100%;
-  height: 50px; }
+  bottom: -50px;
+  left: 60px;
+  width: fit-content; }
 
 #carousel-packing .carousel-nav > .carousel-indicators {
   display: block;
@@ -737,14 +737,20 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   align-items: center;
   justify-content: center;
   height: 50px;
-  width: 50px;
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.829);
+  padding: 0px 20px 0px 12px; }
 
 #carousel-packing .carousel-nav > .carousel-control-prev {
-  background-color: rgba(255, 255, 255, 0.76); }
+  background-color: rgba(255, 255, 255, 0.76);
+  background-color: var(--accent-main);
+  color: white; }
+
+#carousel-packing .carousel-nav > .carousel-control-prev > svg {
+  color: white; }
 
 #carousel-packing .carousel-nav > a svg {
-  color: black; }
+  color: black;
+  margin-right: 10px; }
 
 #carousel-packing .carousel-nav > .carousel-indicators {
   all: unset;

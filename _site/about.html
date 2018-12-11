@@ -21,7 +21,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/sponsor">sponsor</span></a>
             </li>
             <li class="nav-item">
@@ -39,6 +39,24 @@
         </ul>
     </div>
 </nav>
+
+<style>
+    .nav-item > a[href$="/about"] {
+        position: relative !important;
+        color: black !important;
+        font-weight: bolder !important;
+    }
+
+    .nav-item > a[href$="/about"]::after {
+        position: absolute !important;
+        bottom: -1px !important;
+        left: 50% !important;
+        height: 7px !important;
+        width: 7px !important;
+        border-radius: 120px !important;
+        background-color: var(--primary) !important;
+    }
+</style>
         <div class="jumbotron jumbotron-fluid page-title">
     <div class="container animated slideInUp faster">
         <h1 class="display-5">About</h1>
@@ -46,7 +64,28 @@
     </div>
 </div>
 <div class="page-content">
-    
+    <div class="container section">
+    <div class="row">
+        <div class="col">
+            <h1 class="font-scnd">The most functional gear ever to inspire confidence for life on the move.</h1>
+        </div>
+    </div>
+    <h2 class="d-none">Our products inspire confidence</h2>
+    <div class="row">
+        <div class="col">
+            <h3 class="font-scnd">Quality</h3>
+            <p>a high standard for durable, quality materials and manufacturing, giving you peace of mind for a lifetime guaranteed product.</p>
+        </div>
+        <div class="col">
+            <h3 class="font-scnd">Function</h3>
+            <p>feature packed products designed with purpose, to help you stay organized and have confidence on the move.</p>
+        </div>
+        <div class="col">
+            <h3 class="font-scnd">Versatility</h3>
+            <p>functional and quality products; adaptable to any situation. products that boost confidence in the boardroom or at the beach.</p>
+        </div>
+    </div>
+</div>
 </div>
         <footer>
     <div class="links">

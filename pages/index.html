@@ -31,6 +31,7 @@ title: Home
         </div>
     </div>
 </div>
+
 <div id="carousel-packing" class="container-fluid">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <h1 style="position: absolute; top: 10px; left: 10px; z-index: 300;" class="display-3">Pack everything<br>you need</h1>
@@ -47,34 +48,35 @@ title: Home
                     <h5>RFID Safe & Cord Management</h5>
                 </div>-->
             </div>
-            <div class="carousel-nav">
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-                    <i data-feather="chevron-left"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-                    <i data-feather="chevron-right"></i>
-                    <span class="sr-only">Next</span>
-                </a>
-                <div class="carousel-indicators">
-                    <div data-target="#carouselExampleIndicators" data-slide-to="0" class=""></div>
-                    <div data-target="#carouselExampleIndicators" data-slide-to="1" class=""></div>
-                    <div data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></div>
-                    <!--RFID Safe & Cord Management - Protected laptop & tablet compartment - Water bottle pocket-->
-                </div>
+        </div>
+        <div class="carousel-nav d-flex flex-column align-items-end">
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                <i data-feather="arrow-right"></i>
+                <span class="font-scnd">Next</span>
+            </a>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                <i data-feather="arrow-left"></i>
+                <span class="font-scnd">Previous</span>
+            </a>
+            <div class="carousel-indicators">
+                <div data-target="#carouselExampleIndicators" data-slide-to="0" class=""></div>
+                <div data-target="#carouselExampleIndicators" data-slide-to="1" class=""></div>
+                <div data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></div>
+                <!--RFID Safe & Cord Management - Protected laptop & tablet compartment - Water bottle pocket-->
             </div>
         </div>
     </div>
 </div>
+
 <div id="pledge" class="container section">
     <h1 class="display-4">Back our project</h1>
     <div class="row">
         <div class="col">
             <div class="accordion" id="pledge-list">
-                <div class="card pledge collapsed" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <div class="card-body">
+                <div class="card pledge collapsed" id="headingOne">
+                    <div class="card-body" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <div class="container about">
                             <div class="row">
                                 <div class="col-3 price">
@@ -108,7 +110,7 @@ title: Home
                             </div>
                         </div>
                     </div>
-                    <div id="collapseOne" class="collapse no-collapsable" aria-labelledby="headingOne" data-parent="#pledge-list">
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pledge-list">
                         <div class="card-body container">
                             <div class="row">
                                 <div class="col-8 form">
@@ -173,8 +175,9 @@ title: Home
                     </div>
                 </div>
                 
-                <div class="card pledge collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <div class="card-body">
+
+                <div class="card pledge collapsed" id="headingTwo">
+                    <div class="card-body" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <div class="container about">
                             <div class="row">
                                 <div class="col-3 price">
@@ -209,14 +212,71 @@ title: Home
                         </div>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#pledge-list">
-                        <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="card-body container">
+                            <div class="row">
+                                <div class="col-8 form">
+                                    <div class="row">
+                                        <div class="col offset-4">
+                                            <h3>Pledge</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Country</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Name</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Postal code</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Adress</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Appartment,<br>suite, etc.</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Email</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">PhTwo</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Payment</div>
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col offset-6">
+                                            <a href="#" class="btn-box-flow">pledge</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Payment information</h6>
+                                    <p class="note">
+                                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                                    </p>
+                                    <p class="note">
+                                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
+                                    </p>    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-    
-                <div class="card pledge collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    <div class="card-body">
+                <div class="card pledge collapsed" id="headingThree">
+                    <div class="card-body" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                         <div class="container about">
                             <div class="row">
                                 <div class="col-3 price">
@@ -251,12 +311,69 @@ title: Home
                         </div>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#pledge-list">
-                        <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="card-body container">
+                            <div class="row">
+                                <div class="col-8 form">
+                                    <div class="row">
+                                        <div class="col offset-4">
+                                            <h3>Pledge</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Country</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Name</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Postal code</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Adress</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Appartment,<br>suite, etc.</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Email</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">PhThree</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req">Payment</div>
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col offset-6">
+                                            <a href="#" class="btn-box-flow">pledge</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Payment information</h6>
+                                    <p class="note">
+                                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                                    </p>
+                                    <p class="note">
+                                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
+                                    </p>    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col banner">
                     <h5>Back our project 
                         <br>with a custom pledge</h5>
@@ -269,8 +386,6 @@ title: Home
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-    $('.no-collapsable').on('click', function (e) {
-        e.stopPropagation();
-    });
+<script>
+    $(".collapse").off;
 </script>
