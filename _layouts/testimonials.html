@@ -1,0 +1,12 @@
+<div class="card testimonial collapsed" data-rating="{{ data-rating }}" id="heading{{ page.id }}" type="button" data-toggle="collapse" data-target="#testimonial-collapse{{ page.id }}" aria-expanded="false" aria-controls="testimonial-collapse{{ page.id }}">
+    <div class="card-body">
+        <div class="meta">
+            <p>{{ time }} ago</p><div class="rating"></div>
+        </div>
+    </div>
+    <div id="testimonial-collapse{{ page.id }}" class="collapse" aria-labelledby="heading{{ page.id }}" data-parent="#testimonials">
+        <div class="card-body">
+            {{ content }}
+        </div>
+    </div>
+</div>
