@@ -108,7 +108,7 @@ title: Home
                             </div>
                         </div>
                     </div>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pledge-list">
+                    <div id="collapseOne" class="collapse no-collapsable" aria-labelledby="headingOne" data-parent="#pledge-list">
                         <div class="card-body container">
                             <div class="row">
                                 <div class="col-8 form">
@@ -118,36 +118,40 @@ title: Home
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Country*</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-4 req">Country</div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Name</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-4 req">Name</div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Postal code</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-4 req">Postal code</div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Adress</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-4 req">Adress</div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-4">Appartment,<br>suite, etc.</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Email</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-4 req">Email</div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Phone</div>
-                                        <div class="col-8"><input></div>
+                                        <div class="col-4 req">Phone</div>
+                                        <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Payment</div>
-                                        <div class="col-8">MENTODS</div>
+                                        <div class="col-4 req">Payment</div>
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="col offset-6">
@@ -264,3 +268,9 @@ title: Home
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    $('.no-collapsable').on('click', function (e) {
+        e.stopPropagation();
+    });
+</script>

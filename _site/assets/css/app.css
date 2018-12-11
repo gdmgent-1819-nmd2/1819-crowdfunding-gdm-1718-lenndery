@@ -60,12 +60,12 @@ p.note {
 
 /* PAGE TITLE end */
 /* INPUT */
-input {
+input[type="text"] {
   border: none;
   border-bottom: 2px solid var(--accent-main);
   background-color: transparent; }
 
-input:focus, input:active {
+input[type="text"]:focus, input[type="text"]:active {
   border-bottom-color: var(--accent-grey); }
 
 /* INPUT end*/
@@ -137,7 +137,6 @@ a.btn-box-flow {
   border: 2.3px solid black;
   padding: 13px 18px 13px 18px;
   width: fit-content;
-  height: fit-content;
   cursor: pointer;
   transition: 0.13s all ease-in-out;
   z-index: 2; }
@@ -150,9 +149,9 @@ a.btn-box-flow:hover {
 a.btn-box-flow::before {
   content: ' ';
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: 0px;
-  height: calc(100% + 1px);
+  height: 100%;
   width: 0%;
   background-color: black;
   transition: 0.13s all ease-in-out;
@@ -161,14 +160,16 @@ a.btn-box-flow::before {
 a.btn-box-flow:hover::before {
   content: ' ';
   position: absolute;
+  left: -1px;
   width: calc(100% + 1px);
+  height: calc(100% + 1px);
   transition: 0.13s all ease-in-out; }
 
 a.btn-box-flow::after {
   content: ' ';
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0px;
+  right: 0px;
   height: calc(100% + 1px);
   width: calc(100% + 1px);
   background-color: white;
@@ -193,8 +194,7 @@ a.btn-box-flow.btn-on-bg::after, .btn-box-flow.btn-on-bg.btn-bg-light::after {
   background-color: transparent; }
 
 a.btn-box-flow.btn-on-bg::before, .btn-box-flow.btn-on-bg.btn-bg-light::before {
-  background-color: white;
-  left: 0px; }
+  background-color: white; }
 
 a.btn-box-flow.btn-on-bg.btn-bg-light::after {
   background-color: rgba(255, 255, 255, 0.575); }
@@ -374,17 +374,28 @@ a.btn-box-flow + a.btn-box-flow::before {
   flex-wrap: nowrap; }
 
 /* CARD PLEDGE FORM */
-.card.pledge > .collapse > .container > .row > .form > .row {
+.card.pledge > div > .container > .row > .form > .row {
   margin-bottom: 26px; }
 
-.card.pledge > .collapse > .container > .row > .form input {
+.card.pledge > div > .container > .row > .form input[type="text"] {
   width: 100%; }
 
-.card.pledge > .collapse > .container > .row > .form > .row > :nth-child(1) {
+.card.pledge > div > .container > .row > .form > .row > :nth-child(1) {
   text-align: right; }
 
-.card.pledge > .collapse > .container > .row > .form > .row:nth-child(1) > .col > h3 {
+.card.pledge > div > .container > .row > .form > .row:nth-child(1) > .col > h3 {
   text-align: left !important; }
+
+.req::after {
+  content: '*';
+  color: #cf0606;
+  margin-left: 5px; }
+
+#collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div {
+  margin-right: 15px; }
+
+#collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div > img {
+  margin-left: 10px; }
 
 /* PLEDGES END */
 /* TESTIMONIAL */
