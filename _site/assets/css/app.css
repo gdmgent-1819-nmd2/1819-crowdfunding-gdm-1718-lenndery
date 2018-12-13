@@ -1,16 +1,18 @@
 :root {
   --accent-main: #c6c6c6;
   --accent-grey: #757575;
-  --accent-1: #391E51;
+  /* --accent-1: #391E51;
   --accent-2: #3F5EFB;
   --accent-3: #009FFF;
   --accent-4: #C31432;
   --accent-5: #EC2F4B;
+  */
   --font-main: 'Akkurat', 'Arial';
   --font-scnd: 'Circular', var(--font-main);
   --bg-gradient: url(../../assets/images/css/bg_gradients_1.png);
   --col-gradient-small-btn-color: #703BAC;
-  --col-gradient-wide-btn-color: #EC2F4B; }
+  --col-gradient-wide-btn-color: #EC2F4B;
+  --border: 2px solid var(--accent-main); }
 
 * {
   font-family: var(--font-main);
@@ -37,6 +39,13 @@ p.note {
 
 [class*="display"] {
   font-family: var(--font-main); }
+
+.card {
+  border: var(--border);
+  border-radius: 0px; }
+
+h1.section {
+  font-weight: 600; }
 
 /* PAGE TITLE */
 .jumbotron.page-title {
@@ -276,7 +285,7 @@ a.btn-box-flow + a.btn-box-flow::before {
 
 #pledge-list > div {
   border: none;
-  border: 2px solid var(--accent-main); }
+  border: var(--border); }
 
 #pledge-list > div:not(.col):hover {
   box-shadow: 0px 0px 26px 4.73px rgba(0, 0, 0, 0.09);
@@ -407,7 +416,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   border-radius: 0px; }
 
 #testimonials > div {
-  border: 2px solid var(--accent-main);
+  border: var(--border);
   margin-top: -2px;
   background-color: white; }
 
@@ -778,6 +787,44 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   background-color: white; }
 
 /* SLIDER end */
+/* BAG SWITCH */
+.img-comp-container {
+  --img-comp-height: 400px;
+  position: relative;
+  height: var(--img-comp-height);
+  /* should be the same height as the images */ }
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  height: var(--img-comp-height); }
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+  height: var(--img-comp-height);
+  transform: scale(1.8); }
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-main);
+  /* opacity: 0.7; */
+  border-radius: 50%; }
+
+.img-comp-slider::after {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 50%;
+  content: url(../assets/lib/feather/more-vertical.svg); }
+
+/* BAG SWITCH end */
 /* MEDIA QUERIES */
 @media (min-width: 1200px) {
   .container {
