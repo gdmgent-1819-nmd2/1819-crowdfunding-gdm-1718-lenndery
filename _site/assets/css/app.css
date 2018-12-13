@@ -35,6 +35,9 @@ p.note {
   color: var(--accent-grey);
   font-size: 0.8rem; }
 
+[class*="display"] {
+  font-family: var(--font-main); }
+
 /* PAGE TITLE */
 .jumbotron.page-title {
   --jumbotr-title-padding: 30px;
@@ -161,7 +164,7 @@ a.btn-box-flow::before {
 a.btn-box-flow:hover::before {
   content: ' ';
   position: absolute;
-  left: -1px;
+  left: 0px;
   width: calc(100% + 1px);
   height: calc(100% + 1px);
   transition: 0.13s all ease-in-out; }
@@ -173,7 +176,7 @@ a.btn-box-flow::after {
   right: 0px;
   height: calc(100% + 1px);
   width: calc(100% + 1px);
-  background-color: white;
+  background-color: transparent;
   transition: 0.13s all ease-in-out;
   z-index: -1; }
 
@@ -375,14 +378,14 @@ a.btn-box-flow + a.btn-box-flow::before {
   flex-wrap: nowrap; }
 
 /* CARD PLEDGE FORM */
+.card.pledge > :nth-child(2) > .card-body {
+  padding-top: 60px; }
+
 .card.pledge > div > .container > .row > .form > .row {
   margin-bottom: 26px; }
 
 .card.pledge > div > .container > .row > .form input[type="text"] {
   width: 100%; }
-
-.card.pledge > div > .container > .row > .form > .row > :nth-child(1) {
-  text-align: right; }
 
 .card.pledge > div > .container > .row > .form > .row:nth-child(1) > .col > h3 {
   text-align: left !important; }
@@ -711,8 +714,8 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
 
 #carousel-packing .carousel-nav {
   position: absolute;
-  bottom: -50px;
-  left: 60px;
+  bottom: 30px;
+  right: 60px;
   width: fit-content; }
 
 #carousel-packing .carousel-nav > .carousel-indicators {
@@ -727,6 +730,9 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   margin-left: 0px;
   margin-right: 0px; }
 
+#carousel-packing .carousel-nav > [role="button"] > img {
+  height: 20px; }
+
 .carousel-control-next, .carousel-control-prev {
   position: relative; }
 
@@ -738,7 +744,8 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   justify-content: center;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.829);
-  padding: 0px 20px 0px 12px; }
+  padding: 0px 20px 0px 12px;
+  cursor: pointer !important; }
 
 #carousel-packing .carousel-nav > .carousel-control-prev {
   background-color: rgba(255, 255, 255, 0.76);

@@ -37,13 +37,13 @@ title: Home
         <h1 style="position: absolute; top: 10px; left: 10px; z-index: 300;" class="display-3">Pack everything<br>you need</h1>
         <div class="carousel-inner" style="max-height: 500px;">
             <div class="carousel-item">
-                <img class="d-block w-100 img-fit" src="https://cdn.shopify.com/s/files/1/0745/1299/t/27/assets/travel-bag-look-inside-3-opt-high.jpg?8561715980096568874" alt="First slide" height="500px">
+                <img class="d-block w-100 img-fit" src="./assets/images/packing-1.jpg" alt="First slide" height="500px">
             </div>
             <div class="carousel-item active carousel-item-left">
-                <img class="d-block w-100 img-fit" src="https://cdn.shopify.com/s/files/1/0745/1299/t/27/assets/travel-bag-look-inside-6-opt.jpg?8561715980096568874" alt="Second slide" height="500px">
+                <img class="d-block w-100 img-fit" src="./assets/images/packing-2.jpg" alt="Second slide" height="500px">
             </div>
             <div class="carousel-item carousel-item-next carousel-item-left">
-                <img class="d-block w-100 img-fit" src="https://cdn.shopify.com/s/files/1/0745/1299/t/27/assets/travel-bag-look-inside-7-opt.jpg?8561715980096568874" alt="Third slide" height="500px">
+                <img class="d-block w-100 img-fit" src="./assets/images/packing-3.jpg" alt="Third slide" height="500px">
                 <!--<div class="carousel-caption d-none d-md-block">
                     <h5>RFID Safe & Cord Management</h5>
                 </div>-->
@@ -52,12 +52,16 @@ title: Home
         <div class="carousel-nav d-flex flex-column align-items-end">
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-                <i data-feather="arrow-right"></i>
+                <!--<i data-feather="arrow-right"></i>-->
+                <!--<img src="./assets/lib/feather/arrow-right.svg" alt="Next slide">-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 <span class="font-scnd">Next</span>
             </a>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-                <i data-feather="arrow-left"></i>
+                <!--<i data-feather="arrow-left"></i>-->
+                <!--<img src="./assets/lib/feather/arrow-left.svg" alt="Previous slide">-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 <span class="font-scnd">Previous</span>
             </a>
             <div class="carousel-indicators">
@@ -75,8 +79,8 @@ title: Home
     <div class="row">
         <div class="col">
             <div class="accordion" id="pledge-list">
-                <div class="card pledge collapsed" id="headingOne">
-                    <div class="card-body" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="card pledge collapsed" id="headingOne"  type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="card-body">
                         <div class="container about">
                             <div class="row">
                                 <div class="col-3 price">
@@ -120,35 +124,35 @@ title: Home
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Country</div>
+                                        <div class="col-4 req txt-r">Country</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Name</div>
+                                        <div class="col-4 req txt-r">Name</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Postal code</div>
+                                        <div class="col-4 req txt-r">Postal code</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Adress</div>
+                                        <div class="col-4 req txt-r">Adress</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Appartment,<br>suite, etc.</div>
+                                        <div class="col-4 txt-r">Appartment,<br>suite, etc.</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Email</div>
+                                        <div class="col-4 req txt-r">Email</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Phone</div>
+                                        <div class="col-4 req txt-r">Phone</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Payment</div>
+                                        <div class="col-4 req txt-r">Payment</div>
                                         <div class="col-8 d-flex flex-row">
                                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
                                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
@@ -174,19 +178,18 @@ title: Home
                         </div>
                     </div>
                 </div>
-                
 
-                <div class="card pledge collapsed" id="headingTwo">
-                    <div class="card-body" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <div class="card pledge collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <div class="card-body">
                         <div class="container about">
                             <div class="row">
                                 <div class="col-3 price">
-                                    <h1>€149</h1>
-                                    <h4>Super Early Bird</h4>
+                                    <h1>€159</h1>
+                                    <h4>Early Bird</h4>
                                 </div>
                                 <div class="col-6 description">
-                                    <h6>Two NOMATIC Travel Bag Set</h6>
-                                    <p>This includes Two Travel Bag, Two Vacuum Bag and Two Laundry Bag.</p>
+                                    <h6>One NOMATIC Travel Bag Set</h6>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
                                 <div class="col-3 backers">
                                     <div class="container">
@@ -211,6 +214,7 @@ title: Home
                             </div>
                         </div>
                     </div>
+
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#pledge-list">
                         <div class="card-body container">
                             <div class="row">
@@ -221,35 +225,35 @@ title: Home
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Country</div>
+                                        <div class="col-4 req txt-r">Country</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Name</div>
+                                        <div class="col-4 req txt-r">Name</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Postal code</div>
+                                        <div class="col-4 req txt-r">Postal code</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Adress</div>
+                                        <div class="col-4 req txt-r">Adress</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">Appartment,<br>suite, etc.</div>
+                                        <div class="col-4 txt-r">Appartment,<br>suite, etc.</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Email</div>
+                                        <div class="col-4 req txt-r">Email</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">PhTwo</div>
+                                        <div class="col-4 req txt-r">Phone</div>
                                         <div class="col-8"><input type="text"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Payment</div>
+                                        <div class="col-4 req txt-r">Payment</div>
                                         <div class="col-8 d-flex flex-row">
                                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
                                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
@@ -275,17 +279,18 @@ title: Home
                         </div>
                     </div>
                 </div>
-                <div class="card pledge collapsed" id="headingThree">
-                    <div class="card-body" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+
+                <div class="card pledge collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <div class="card-body">
                         <div class="container about">
                             <div class="row">
                                 <div class="col-3 price">
-                                    <h1>€149</h1>
-                                    <h4>Super Early Bird</h4>
+                                    <h1>€325</h1>
+                                    <h4>Dubble Early Bird</h4>
                                 </div>
                                 <div class="col-6 description">
-                                    <h6>Three NOMATIC Travel Bag Set</h6>
-                                    <p>This includes Three Travel Bag, Three Vacuum Bag and Three Laundry Bag.</p>
+                                    <h6>Two NOMATIC Travel Bag Set</h6>
+                                    <p>This includes two Travel Bag, two Vacuum Bag and two Laundry Bag.</p>
                                 </div>
                                 <div class="col-3 backers">
                                     <div class="container">
@@ -314,50 +319,26 @@ title: Home
                         <div class="card-body container">
                             <div class="row">
                                 <div class="col-8 form">
-                                    <div class="row">
+                                    <div class="row no-margin-b">
                                         <div class="col offset-4">
                                             <h3>Pledge</h3>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4 req">Country</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req">Name</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req">Postal code</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req">Adress</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4">Appartment,<br>suite, etc.</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req">Email</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req">PhThree</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req">Payment</div>
-                                        <div class="col-8 d-flex flex-row">
-                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
-                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
-                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
+                                        <div class="col offset-4">
+                                            <h1 class="font-main display-3" style="font-weight: 700;">Thanks for<br>backing us!</h1>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col offset-6">
-                                            <a href="#" class="btn-box-flow">pledge</a>
+                                        <div class="col offset-4">
+                                            <h5><strong>We successfully recieved<br>your pledge</strong></h5>
+                                            <br>
+                                            <h5>You will get a confirmation email with the details of your pledge.</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row no-margin-b">
+                                        <div class="col offset-4">
+                                            <a href="" class="underlined">share your pledge</a>
                                         </div>
                                     </div>
                                 </div>
@@ -374,6 +355,7 @@ title: Home
                         </div>
                     </div>
                 </div>
+
                 <div class="col banner">
                     <h5>Back our project 
                         <br>with a custom pledge</h5>
@@ -387,5 +369,5 @@ title: Home
 </div>
 
 <script>
-    $(".collapse").off;
+    $(".collapsed").off;
 </script>

@@ -45,6 +45,10 @@ p.note {
     font-size: 0.8rem;
 }
 
+[class*="display"] {
+    font-family: var(--font-main);
+}
+
 /* PAGE TITLE */
     .jumbotron.page-title {
         --jumbotr-title-padding: 30px;
@@ -194,7 +198,7 @@ p.note {
     a.btn-box-flow:hover::before {
         content: ' ';
         position: absolute;
-        left: -1px;
+        left: 0px;
         width: calc(100% + 1px);
         height: calc(100% + 1px);
         transition: 0.13s all ease-in-out;
@@ -207,7 +211,7 @@ p.note {
         right: 0px;
         height: calc(100% + 1px);
         width: calc(100% + 1px);
-        background-color: white;
+        background-color: transparent;
         transition: 0.13s all ease-in-out;
         z-index: -1;
     }
@@ -451,16 +455,16 @@ p.note {
         }
 
     /* CARD PLEDGE FORM */
+        .card.pledge > :nth-child(2) > .card-body {
+            padding-top: 60px;
+        }
+
         .card.pledge > div > .container > .row > .form > .row {
             margin-bottom: 26px;
         }
 
         .card.pledge > div > .container > .row > .form input[type="text"] {
             width: 100%;
-        }
-
-        .card.pledge > div > .container > .row > .form > .row > :nth-child(1) {
-            text-align: right;
         }
 
         // FORM TITLE PLEDGE
@@ -858,8 +862,8 @@ p.note {
 
     #carousel-packing .carousel-nav {
         position: absolute;
-        bottom: -50px;
-        left: 60px;
+        bottom: 30px;
+        right: 60px;
         width: fit-content;
     }
 
@@ -876,6 +880,11 @@ p.note {
         margin-right: 0px;
     }
 
+    // IF ARROW IS IMG
+    #carousel-packing .carousel-nav > [role="button"] > img {
+        height: 20px;
+    }
+
     .carousel-control-next, .carousel-control-prev {
         position: relative;
     }
@@ -889,6 +898,7 @@ p.note {
         height: 50px;
         background-color: rgba(255, 255, 255, 0.829);
         padding: 0px 20px 0px 12px;
+        cursor: pointer !important;
     }
 
     #carousel-packing .carousel-nav > .carousel-control-prev {
@@ -897,6 +907,7 @@ p.note {
         color: white;
     }
 
+    // IF ARROW IS SVG
     #carousel-packing .carousel-nav > .carousel-control-prev > svg {
         color: white;
     }
