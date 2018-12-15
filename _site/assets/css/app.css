@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --accent-main: #c6c6c6;
   --accent-grey: #757575;
@@ -12,7 +13,8 @@
   --bg-gradient: url(../../assets/images/css/bg_gradients_1.png);
   --col-gradient-small-btn-color: #703BAC;
   --col-gradient-wide-btn-color: #EC2F4B;
-  --border: 2px solid var(--accent-main); }
+  --border: 2px solid var(--accent-main);
+  --shadow: 0px 0px 26px 4.73px rgba(0,0,0,0.09); }
 
 * {
   font-family: var(--font-main);
@@ -46,6 +48,11 @@ p.note {
 
 h1.section {
   font-weight: 600; }
+
+.badge.fix  {
+  position: absolute;
+  right: 0px;
+  top: 0px; }
 
 /* PAGE TITLE */
 .jumbotron.page-title {
@@ -284,6 +291,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   border-radius: 0px; }
 
 #pledge-list > div {
+  position: relative;
   border: none;
   border: var(--border); }
 
@@ -794,6 +802,9 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   height: var(--img-comp-height);
   /* should be the same height as the images */ }
 
+.img-comp-container > :nth-child(3) {
+  border-right: var(--border); }
+
 .img-comp-img {
   position: absolute;
   width: auto;
@@ -816,13 +827,14 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   height: 40px;
   background-color: var(--accent-main);
   /* opacity: 0.7; */
-  border-radius: 50%; }
+  border-radius: 50%;
+  box-shadow: 0px 0px 26px 4.73px rgba(0, 0, 0, 0.041); }
 
 .img-comp-slider::after {
   position: absolute;
-  top: calc(50% - 12px);
-  left: 50%;
-  content: url(../assets/lib/feather/more-vertical.svg); }
+  top: calc(50% - 13px);
+  left: calc(50% - 12px);
+  content: url(https://gdmgent-1819-nmd2.github.io/1819-crowdfunding-gdm-1718-lenndery/assets/lib/feather/more-vertical.svg); }
 
 /* BAG SWITCH end */
 /* MEDIA QUERIES */
