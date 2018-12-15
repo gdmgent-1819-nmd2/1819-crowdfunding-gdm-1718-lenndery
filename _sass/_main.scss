@@ -689,6 +689,27 @@ h1.section {
         color: white;
         margin-bottom: 40px;
     }
+
+    #jumbotron-video-overlay #nomaticPromoBtn {
+        position: absolute;
+        bottom: 15px;
+        right: 5px;
+        z-index: 100;
+        border: none;
+        background: none;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        appearance: none;
+        -webkit-appearance: none;
+        /* border-bottom: var(--border);
+        padding: calc(18px - 5px) 0px; */
+        width: fit-content;
+        cursor: pointer;
+        transform: scale(0.8);
+        padding: 0px;
+        opacity: 0.6;
+    }
 /* JUMBOTRON VIDEO end */
 
 /* BANNER GRADIENT */

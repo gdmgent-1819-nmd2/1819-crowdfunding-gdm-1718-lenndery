@@ -62,12 +62,13 @@
 </style>
         <div class="jumbotron jumbotron-fluid header-video">
     <div class="container-video">
-        <video autoplay loop muted>
+        <video id="nomaticPromo" autoplay loop muted>
             <source src="./assets/video/nomatic_promo_kort_v4.mp4" type="video/mp4">
         </video>
         <img src="./assets/images/your_compagnion.jpg" height="100%" width="100%" class="img-fit d-none">
     </div>
     <div id="jumbotron-video-overlay" class="container position-absolute">
+        <button id="nomaticPromoBtn" onclick="playPause()" class="font-scnd play">pause video</button>
         <div class="row">
             <div class="col d-flex justify-content-center align-items-center">
                 <div class="animated fadeInUp faster ">
@@ -563,6 +564,24 @@
 
 <script>
     initComparisons();
+</script>
+
+<script>
+    var myVideo = document.getElementById("nomaticPromo");
+
+    function playPause() {
+    var videoBtn = document.getElementById("nomaticPromoBtn");
+    if (myVideo.paused) 
+        myVideo.play(),
+        videoBtn.classList.add("play"),
+        videoBtn.classList.remove("pause"),
+        videoBtn.innerHTML = " Pause video";
+    else 
+        myVideo.pause(),
+        videoBtn.classList.add("pause"),
+        videoBtn.classList.remove("play"),
+        videoBtn.innerHTML = " Play video";
+    }
 </script>
         <footer>
     <div class="links">
