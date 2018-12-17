@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --accent-main: #c6c6c6;
   --accent-grey: #757575;
@@ -49,11 +48,6 @@ p.note {
 h1.section {
   font-weight: 600; }
 
-.badge.fix  {
-  position: absolute;
-  right: 0px;
-  top: 0px; }
-
 /* PAGE TITLE */
 .jumbotron.page-title {
   --jumbotr-title-padding: 30px;
@@ -92,6 +86,10 @@ input[type="text"]:focus, input[type="text"]:active {
 .container.section {
   margin-top: 65px; }
 
+.container.section-hi {
+  margin-top: 100px;
+  margin-bottom: 80px; }
+
 .container.section > h1 {
   font-family: var(--font-scnd);
   margin-bottom: 40px;
@@ -109,8 +107,11 @@ footer > div.logo {
   background-color: var(--accent-grey); }
 
 footer > div > div > .row {
-  margin-bottom: 0px;
+  margin-bottom: 10px !important;
   color: white; }
+
+footer > div.links > div > div > div {
+  margin-bottom: 30px; }
 
 /* LINKS */
 footer > .links {
@@ -118,16 +119,16 @@ footer > .links {
   padding-top: var(--footer-links-padding);
   padding-bottom: var(--footer-links-padding); }
 
-footer > .links > .container > .row > .col > h4 {
+footer > .links > .container > .row > div > h4 {
   color: black; }
 
-footer > .links > .container > .row > .col > a {
+footer > .links > .container > .row > div > a {
   display: block; }
 
-footer > .links > .container > .row > .col > input {
+footer > .links > .container > .row > div > input {
   border-bottom-color: white; }
 
-footer > .links > .container > .row > .col > input::placeholder {
+footer > .links > .container > .row > div > input::placeholder {
   color: white; }
 
 /* LOGO */
@@ -295,7 +296,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   border: none;
   border: var(--border); }
 
-#pledge-list > div:not(.col):hover {
+#pledge-list > div:not(.col):hover, #pledge-list > div:not(.col).hover-state {
   box-shadow: 0px 0px 26px 4.73px rgba(0, 0, 0, 0.09);
   transition: 0.2s box-shadow z-index transform ease-in-out;
   z-index: 50;
@@ -417,6 +418,13 @@ a.btn-box-flow + a.btn-box-flow::before {
 
 #collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div > img {
   margin-left: 10px; }
+
+/* BADGE */
+#badge-popular {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  height: fit-content; }
 
 /* PLEDGES END */
 /* TESTIMONIAL */
@@ -870,7 +878,10 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
 
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 20px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+
+  footer > div.links > div > div > div {
+    margin-bottom: 0px; } }
 @media (min-width: 768px) {
   .col.banner-gradient {
     padding: 30px 60px; } }
