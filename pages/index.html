@@ -8,12 +8,13 @@ title: Home
 ---
 <div class="jumbotron jumbotron-fluid header-video">
     <div class="container-video">
-        <video autoplay loop muted>
+        <video id="nomaticPromo" autoplay loop muted>
             <source src="./assets/video/nomatic_promo_kort_v4.mp4" type="video/mp4">
         </video>
         <img src="./assets/images/your_compagnion.jpg" height="100%" width="100%" class="img-fit d-none">
     </div>
     <div id="jumbotron-video-overlay" class="container position-absolute">
+        <button id="nomaticPromoBtn" onclick="playPause()" class="font-scnd play">pause video</button>
         <div class="row">
             <div class="col d-flex justify-content-center align-items-center">
                 <div class="animated fadeInUp faster ">
@@ -32,8 +33,142 @@ title: Home
     </div>
 </div>
 
+<script>
+    function initComparisons() {
+        var x, i;
+        /*find all elements with an "overlay" class:*/
+        x = document.getElementsByClassName("img-comp-overlay");
+        for (i = 0; i < x.length; i++) {
+        /*once for each "overlay" element:
+        pass the "overlay" element as a parameter when executing the compareImages function:*/
+        compareImages(x[i]);
+        }
+
+        function compareImages(img) {
+        var slider, img, clicked = 0, w, h;
+        /*get the width and height of the img element*/
+        w = img.offsetWidth;
+        h = img.offsetHeight;
+        /*set the width of the img element to 50%:*/
+        img.style.width = (w / 2) + "px";
+        /*create slider:*/
+        slider = document.createElement("DIV");
+        slider.setAttribute("class", "img-comp-slider");
+        /*insert slider*/
+        img.parentElement.insertBefore(slider, img);
+        /*position the slider in the middle:*/
+        slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+        slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+        /*execute a function when the mouse button is pressed:*/
+        slider.addEventListener("mousedown", slideReady);
+        /*and another function when the mouse button is released:*/
+        window.addEventListener("mouseup", slideFinish);
+        /*or touched (for touch screens:*/
+        slider.addEventListener("touchstart", slideReady);
+        /*and released (for touch screens:*/
+        window.addEventListener("touchstop", slideFinish);
+        function slideReady(e) {
+            /*prevent any other actions that may occur when moving over the image:*/
+            e.preventDefault();
+            /*the slider is now clicked and ready to move:*/
+            clicked = 1;
+            /*execute a function when the slider is moved:*/
+            window.addEventListener("mousemove", slideMove);
+            window.addEventListener("touchmove", slideMove);
+        }
+
+        function slideFinish() {
+            /*the slider is no longer clicked:*/
+            clicked = 0;
+        }
+        
+        function slideMove(e) {
+            var pos;
+            /*if the slider is no longer clicked, exit this function:*/
+            if (clicked == 0) return false;
+            /*get the cursor's x position:*/
+            pos = getCursorPos(e)
+            /*prevent the slider from being positioned outside the image:*/
+            if (pos < 0) pos = 0;
+            if (pos > w) pos = w;
+            /*execute a function that will resize the overlay image according to the cursor:*/
+            slide(pos);
+        }
+        function getCursorPos(e) {
+            var a, x = 0;
+            e = e || window.event;
+            /*get the x positions of the image:*/
+            a = img.getBoundingClientRect();
+            /*calculate the cursor's x coordinate, relative to the image:*/
+            x = e.pageX - a.left;
+            /*consider any page scrolling:*/
+            x = x - window.pageXOffset;
+            return x;
+        }
+        function slide(x) {
+            /*resize the image:*/
+            img.style.width = x + "px";
+            /*position the slider:*/
+            slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+        }
+        }
+    }
+</script>
+
+<div id="bag-switch" class="container section-hi">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="img-comp-container">
+                <div class="img-comp-img">
+                    <img src="./assets/images/transform_backpack_big.jpg">
+                </div>
+                <div class="img-comp-img img-comp-overlay">
+                    <img src="./assets/images/transform_duffelbag_big.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-right flex-column justify-content-center">
+            <h1 class="display-4 section font-scnd">
+                Versatile ...<br class="d-none d-lg-block">
+                and spacious.
+            </h1>
+            <br>
+            <p>
+                On your shoulders? Or in your hand?
+                Use it as a backpack or a duffelbag. Just a quick pull to switch between them.
+                <span class="d-lg-none">(Don't believe us? Try it yourself up here.)</span>
+                <span class="d-none d-lg-block">(Don't believe us? Try it yourself on the left.)</span>
+            </p>
+            <p>
+                Wherever you go, this bag won't disappoint you.
+                And if you need a little more space, just open the extra zipper.
+            </p>
+        </div>
+    </div>
+    <div class="row d-none">
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="./assets/images/transform_backpack_vrijgesteld.png" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="font-scnd">Backpack</h3>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="./assets/images/transform_duffelbag_vrijgesteld.png" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="font-scnd">Duffelbag</h3>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="carousel-packing" class="container-fluid">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
         <h1 style="position: absolute; top: 10px; left: 10px; z-index: 300;" class="display-3">Pack everything<br>you need</h1>
         <div class="carousel-inner" style="max-height: 500px;">
             <div class="carousel-item">
@@ -79,19 +214,19 @@ title: Home
     <div class="row">
         <div class="col">
             <div class="accordion" id="pledge-list">
-                <div class="card pledge collapsed" id="headingOne"  type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="card pledge collapsed" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <div class="card-body">
                         <div class="container about">
                             <div class="row">
-                                <div class="col-3 price">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
                                     <h1>€149</h1>
-                                    <h4>Super Early Bird</h4>
+                                    <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
-                                    <p>This includes One Travel Bag, One Vacuum Bag and One Laundry Bag.</p>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
-                                <div class="col-3 backers">
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
@@ -183,15 +318,15 @@ title: Home
                     <div class="card-body">
                         <div class="container about">
                             <div class="row">
-                                <div class="col-3 price">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
                                     <h1>€159</h1>
                                     <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-lg-0 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
                                     <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
-                                <div class="col-3 backers">
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
@@ -278,21 +413,22 @@ title: Home
                             </div>
                         </div>
                     </div>
+                    <div id="badge-popular" class="badge badge-secondary font-scnd"><h5 class="no-margin-b">Popular</h5></div>
                 </div>
 
                 <div class="card pledge collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                     <div class="card-body">
                         <div class="container about">
                             <div class="row">
-                                <div class="col-3 price">
-                                    <h1>€325</h1>
-                                    <h4>Dubble Early Bird</h4>
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
+                                    <h1>€179</h1>
+                                    <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-6 description">
-                                    <h6>Two NOMATIC Travel Bag Set</h6>
-                                    <p>This includes two Travel Bag, two Vacuum Bag and two Laundry Bag.</p>
+                                <div class="col-sm-12 col-md-8 col-lg-6 description">
+                                    <h6>One NOMATIC Travel Bag Set</h6>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
-                                <div class="col-3 backers">
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
@@ -367,6 +503,28 @@ title: Home
         </div>
     </div>
 </div>
+
+<script>
+    var myVideo = document.getElementById("nomaticPromo");
+
+    function playPause() {
+    var videoBtn = document.getElementById("nomaticPromoBtn");
+    if (myVideo.paused) 
+        myVideo.play(),
+        videoBtn.classList.add("play"),
+        videoBtn.classList.remove("pause"),
+        videoBtn.innerHTML = " Pause video";
+    else 
+        myVideo.pause(),
+        videoBtn.classList.add("pause"),
+        videoBtn.classList.remove("play"),
+        videoBtn.innerHTML = " Play video";
+    }
+</script>
+
+<script>
+    initComparisons();
+</script>
 
 <script>
     $(".collapsed").off;
