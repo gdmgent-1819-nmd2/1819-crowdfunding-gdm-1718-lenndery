@@ -470,6 +470,10 @@ h1.section {
             margin-bottom: 0px;
         }
 
+        .card.pledge > .card-body > .container > .row > .backers .container {
+            padding: 0px;
+        }
+
         .backers > .container > :nth-child(2) p {
             margin-bottom: 0px;
         }
@@ -517,9 +521,155 @@ h1.section {
             top: -10px;
             right: -10px;
             height: fit-content;
+            z-index: 3000 !important;
         }
 
 /* PLEDGES END */
+
+/* ORDER */
+    /* ABOUT */
+        #order .about {
+            margin-bottom: 0px;
+        }
+
+        #order .about > h6 {
+            font-weight: bold;
+        }
+
+    /* FORM */
+        #order .form input[type="text"] {
+            width: 100%;
+        }
+
+        #order .form .row {
+            margin-bottom: 26px;
+        }
+
+    /* PAYMENT */
+        #order .form #payment > div > div {
+            margin-right: 15px;
+        }
+
+        #order .form #payment > div > div:last-child {
+            margin-right: 0px;
+        }
+
+        #order .form #payment > div > div > img {
+            margin-left: 10px;
+        }
+
+    /* PRICE */
+        #order #price:first-child h2 {
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+    /* CARD PLEDGE PRICE */
+        .card.pledge > .card-body > .container > .row > .price h1{
+            font-family: var(--font-scnd) !important;
+            letter-spacing: 1px;
+            font-weight: 400 !important;
+            font-size: 4rem;
+        }
+
+        .card.pledge > .card-body > .container > .row > .price h3{
+            font-family: var(--font-main);
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+    /* CARD PLEDGE DESCRIPTION */
+        .card.pledge > .card-body > .container .row {
+            margin-bottom: 0px;
+        }
+
+        .card.pledge > .card-body > .container > .row > .description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card.pledge > .card-body > .container > .row > .description p{
+            font-size: 1rem;
+            margin-bottom: 0px;
+        }
+
+        .card.pledge > .card-body > .container > .row > .description h6 {
+            font-weight: bold;
+        }
+
+    /* CARD PLEDGE BACKERS */
+        .card.pledge > .card-body > .container > .row > .backers {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+        }
+        
+        .card.pledge > .card-body > .container > .row > .backers h6 {
+            font-family: var(--font-scnd);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 0.7rem;
+            margin-bottom: 0px;
+        }
+
+        .card.pledge > .card-body > .container > .row > .backers .container {
+            padding: 0px;
+        }
+
+        .backers > .container > :nth-child(2) p {
+            margin-bottom: 0px;
+        }
+
+        .backers > .container > :nth-child(2) {
+            flex-wrap: nowrap;
+        }
+
+    /* CARD PLEDGE FORM */
+        .card.pledge > :nth-child(2) > .card-body {
+            padding-top: 60px;
+        }
+
+        .card.pledge > div > .container > .row > .form > .row {
+            margin-bottom: 26px;
+        }
+
+        .card.pledge > div > .container > .row > .form input[type="text"] {
+            width: 100%;
+        }
+
+        // FORM TITLE PLEDGE
+        .card.pledge > div > .container > .row > .form > .row:nth-child(1) > .col > h3 {
+            text-align: left !important;
+        }
+
+        .req::after {
+            content: '*';
+            color: rgb(207, 6, 6);
+            margin-left: 5px;
+        }
+
+        // PAYMENT METHODS MARGIN METHODS
+        #collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div {
+            margin-right: 15px;
+        }
+        // PAYMENT METHODS MARGIN LOGO
+        #collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div > img {
+            margin-left: 10px;
+        }
+
+    /* BADGE */
+        #badge-popular {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            height: fit-content;
+            z-index: 3000 !important;
+        }
+
+/* ORDER end */
 
 /* TESTIMONIAL */
     #testimonials * {
@@ -665,7 +815,7 @@ h1.section {
             font-size: 16px;
             color: var(--accent-main);
         }
-/* TESTMONIAL END */
+/* TESTMONIAL end */
 
 /* JUMBROTRON VIDEO */
     .jumbotron.header-video {
