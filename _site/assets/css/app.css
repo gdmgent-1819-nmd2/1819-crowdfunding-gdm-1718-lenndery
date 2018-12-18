@@ -100,6 +100,12 @@ footer {
   --footer-padding: 30px;
   padding-top: var(--footer-padding); }
 
+footer div.row {
+  margin-bottom: 0px; }
+
+footer div[class*="col"] {
+  margin-bottom: 30px; }
+
 footer > div.links {
   background-color: var(--accent-main); }
 
@@ -107,7 +113,6 @@ footer > div.logo {
   background-color: var(--accent-grey); }
 
 footer > div > div > .row {
-  margin-bottom: 10px !important;
   color: white; }
 
 footer > div.links > div > div > div {
@@ -131,11 +136,20 @@ footer > .links > .container > .row > div > input {
 footer > .links > .container > .row > div > input::placeholder {
   color: white; }
 
+body > footer > div.links > div > div > div:last-child {
+  margin-bottom: 0px; }
+
 /* LOGO */
 footer > .logo {
   --footer-logo-padding: 13px;
   padding-top: var(--footer-logo-padding);
   padding-bottom: var(--footer-logo-padding); }
+
+#logo-footer {
+  margin-bottom: 15px; }
+
+#site-rights, #site-policy {
+  margin-bottom: 0px; }
 
 /* FOOTER end */
 /* BUTTONS */
@@ -388,6 +402,9 @@ a.btn-box-flow + a.btn-box-flow::before {
   font-weight: 400;
   font-size: 0.7rem;
   margin-bottom: 0px; }
+
+.card.pledge > .card-body > .container > .row > .backers > .container {
+  padding: 0px; }
 
 .backers > .container > :nth-child(2) p {
   margin-bottom: 0px; }
@@ -881,6 +898,12 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
     padding-right: 20px; }
 
   footer > div.links > div > div > div {
+    margin-bottom: 0px; }
+
+  footer > div.logo > div > div > div {
+    margin-bottom: 0px; }
+
+  footer div[class*="col"] {
     margin-bottom: 0px; } }
 @media (min-width: 768px) {
   .col.banner-gradient {

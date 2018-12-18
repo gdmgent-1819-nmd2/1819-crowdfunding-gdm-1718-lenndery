@@ -272,15 +272,15 @@
                     <div class="card-body">
                         <div class="container about">
                             <div class="row">
-                                <div class="col-3 price">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
                                     <h1>€149</h1>
-                                    <h4>Super Early Bird</h4>
+                                    <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
-                                    <p>This includes One Travel Bag, One Vacuum Bag and One Laundry Bag.</p>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
-                                <div class="col-3 backers">
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
@@ -368,19 +368,19 @@
                     </div>
                 </div>
 
-                <div class="card pledge collapsed hover-state" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <div class="card pledge collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <div class="card-body">
                         <div class="container about">
                             <div class="row">
-                                <div class="col-3 price">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
                                     <h1>€159</h1>
                                     <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
                                     <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
-                                <div class="col-3 backers">
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
@@ -474,15 +474,15 @@
                     <div class="card-body">
                         <div class="container about">
                             <div class="row">
-                                <div class="col-3 price">
-                                    <h1>€325</h1>
-                                    <h4>Dubble Early Bird</h4>
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
+                                    <h1>€179</h1>
+                                    <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-6 description">
-                                    <h6>Two NOMATIC Travel Bag Set</h6>
-                                    <p>This includes two Travel Bag, two Vacuum Bag and two Laundry Bag.</p>
+                                <div class="col-sm-12 col-md-8 col-lg-6 description">
+                                    <h6>One NOMATIC Travel Bag Set</h6>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
-                                <div class="col-3 backers">
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
@@ -559,14 +559,6 @@
 </div>
 
 <script>
-    $(".collapsed").off;
-</script>
-
-<script>
-    initComparisons();
-</script>
-
-<script>
     var myVideo = document.getElementById("nomaticPromo");
 
     function playPause() {
@@ -582,6 +574,14 @@
         videoBtn.classList.remove("play"),
         videoBtn.innerHTML = " Play video";
     }
+</script>
+
+<script>
+    initComparisons();
+</script>
+
+<script>
+    $(".show").off;
 </script>
         <footer>
     <div class="links">
@@ -613,11 +613,11 @@
     <div class="logo">
         <div class="container">
             <div class="row">
-                <div class="col-2 col-sm-12">
+                <div id="logo-footer" class="col-md-2 col-sm-12">
                     <img src="./assets/images/logo_nomatic_white.svg" height="20px" alt="">
                 </div>
-                <div class="col-4">© 2018 Nomatic &nbsp; All rights reserved</div>
-                <div class="col">Cookie policy Privacy policy</div>
+                <div id="site-rights" class="col-md-4 col-sm-12">© 2018 Nomatic &nbsp; All rights reserved</div>
+                <div id="site-policy" class="col-md-2 col-sm-12">Cookie policy Privacy policy</div>
             </div>
         </div>
     </div>

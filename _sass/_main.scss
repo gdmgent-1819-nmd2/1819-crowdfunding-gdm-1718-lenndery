@@ -123,6 +123,15 @@ h1.section {
         padding-top: var(--footer-padding);
     }
 
+    footer div.row {
+        margin-bottom: 0px;
+    }
+
+    // ADD MARGIN TO COLUMN BOTTOM
+    footer div[class*="col"] {
+        margin-bottom: 30px;
+    }
+
     footer > div.links {
         background-color: var(--accent-main);
     }
@@ -132,7 +141,6 @@ h1.section {
     }
 
     footer > div > div > .row {
-        margin-bottom: 10px !important;
         color: white;
     }
 
@@ -164,11 +172,23 @@ h1.section {
             color: white;
         }
 
+        body > footer > div.links > div > div > div:last-child {
+            margin-bottom: 0px;
+        }
+
     /* LOGO */
         footer > .logo {
             --footer-logo-padding: 13px;
             padding-top: var(--footer-logo-padding);
             padding-bottom: var(--footer-logo-padding);
+        }
+
+        #logo-footer {
+            margin-bottom: 15px;
+        }
+
+        #site-rights, #site-policy {
+            margin-bottom: 0px;
         }
 /* FOOTER end */
 
@@ -468,6 +488,10 @@ h1.section {
             font-weight: 400;
             font-size: 0.7rem;
             margin-bottom: 0px;
+        }
+
+        .card.pledge > .card-body > .container > .row > .backers > .container {
+            padding: 0px;
         }
 
         .backers > .container > :nth-child(2) p {
@@ -1066,6 +1090,16 @@ h1.section {
         }
 
         footer > div.links > div > div > div {
+            margin-bottom: 0px;
+        }
+
+        // REMOVE MARGIN FOOTER LOGO ROW
+        footer > div.logo > div > div > div {
+            margin-bottom: 0px;
+        }
+
+        // ADD MARGIN TO COLUMN BOTTOM
+        footer div[class*="col"] {
             margin-bottom: 0px;
         }
 
