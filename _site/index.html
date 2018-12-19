@@ -12,11 +12,12 @@
     <script src="https://ce.lennertderyck.be/library/elements.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
 </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-offset="100px">
+        <nav id="navbarTop" class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-offset="100px">
     <a class="navbar-brand " href="/1819-crowdfunding-gdm-1718-lenndery/index">
-        <img src="./assets/images/logo_nomatic.svg" alt="logo nomatic" height="30px">
+        <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic.svg" alt="logo nomatic" height="30px">
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-toggler-vert"></div>
@@ -274,9 +275,9 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 col-lg-3 price">
                                     <h1>€149</h1>
-                                    <h4>Early Bird</h4>
+                                    <h4>Super Early Bird</h4>
                                 </div>
-                                <div class="col-sm-12 col-md-8 col-lg-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
                                     <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
@@ -376,7 +377,7 @@
                                     <h1>€159</h1>
                                     <h4>Early Bird</h4>
                                 </div>
-                                <div class="col-sm-12 col-md-8 col-lg-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
                                     <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
@@ -476,9 +477,9 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 col-lg-3 price">
                                     <h1>€179</h1>
-                                    <h4>Early Bird</h4>
+                                    <h4>Double Early Bird</h4>
                                 </div>
-                                <div class="col-sm-12 col-md-8 col-lg-6 description">
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
                                     <h6>One NOMATIC Travel Bag Set</h6>
                                     <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
                                 </div>
@@ -581,43 +582,50 @@
 </script>
 
 <script>
-    $(".show").off;
+    $(".collapsed").off;
 </script>
         <footer>
     <div class="links">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-3">
-                    <h4>About</h4>
-                    <a href="">About us</a>
-                    <a href="">Press</a>
-                    <a href="">Status</a>
+        <div class="container-fluid">
+            <div class="row mb-0 d-flex align-items-center">
+                <div class="col-sm-12 col-md-2 mr-auto">
+                    <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic_white.svg" alt="Logo nomatic">
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <h4>Support</h4>
-                    <a href="">FAQ</a>
-                    <a href="">Help center</a>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">About</a>
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <h4>More</h4>
-                    <a href="">Nomatic on Kickstarter</a>
-                    <a href="">Nomatic on Indiegogo</a>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">Support</a>
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <h4>Sign up!</h4>
-                    <input type="text" placeholder="E-mail">
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">More</a>
+                </div>
+                
+                <div class="col-sm-6 col-md-auto d-flex flex-row">
+                    <div class="btn col-sm-6 col-md-auto uppc txt-m-scnd" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
+                        Sign up
+                    </div>
+                </div>
+                <div class="collapse" id="collapseFooterMore">
+                    <div class="col-sm-6 col-md-auto">
+                        <div class="card card-body">
+                            <input type="text" placeholder="E-mail">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="logo">
-        <div class="container">
-            <div class="row">
-                <div id="logo-footer" class="col-md-2 col-sm-12">
-                    <img src="./assets/images/logo_nomatic_white.svg" height="20px" alt="">
+        <div class="container-fluid">
+            <div class="row mb-0 d-flex justify-content-between align-items-center">
+                <div class="col-sm-12 col-md-auto d-flex">
+                    <p class="mb-0">© 2018 Nomatic &mdash; All rights reserved</p>
                 </div>
-                <div id="site-rights" class="col-md-4 col-sm-12">© 2018 Nomatic &nbsp; All rights reserved</div>
-                <div id="site-policy" class="col-md-2 col-sm-12">Cookie policy Privacy policy</div>
+                <div class="col-sm-12 col-md-auto txt-sm-scnd">
+                    <a href="">Cookie policy</a>
+                    <a class="ml-3" href="">Privacy policy</a>
+                </div>
             </div>
         </div>
     </div>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --accent-main: #c6c6c6;
   --accent-grey: #757575;
@@ -13,7 +14,8 @@
   --col-gradient-small-btn-color: #703BAC;
   --col-gradient-wide-btn-color: #EC2F4B;
   --border: 2px solid var(--accent-main);
-  --shadow: 0px 0px 26px 4.73px rgba(0,0,0,0.09); }
+  --shadow: 0px 0px 26px 4.73px rgba(0,0,0,0.09);
+  --navbar-height: fit-content; }
 
 * {
   font-family: var(--font-main);
@@ -48,21 +50,39 @@ p.note {
 h1.section {
   font-weight: 600; }
 
+.sm-scnd, .txt-m-scnd, .txt-sm-scnd, .txt-xsm-scnd {
+  font-family: var(--font-scnd);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1rem; }
+
+.txt-m-scnd {
+  font-size: 1rem; }
+
+.txt-sm-scnd {
+  font-size: 0.85rem; }
+
+.txt-xsm-scnd {
+  font-size: 0.7rem; }
+
 /* PAGE TITLE */
 .jumbotron.page-title {
-  --jumbotr-title-padding: 30px;
-  background-color: #acacac;
+  --jumbotr-title-padding: 60px;
+  background-color: transparent;
   margin-bottom: 0px;
   padding-top: var(--jumbotr-title-padding);
-  padding-bottom: var(--jumbotr-title-padding);
-  user-select: none; }
+  padding-bottom: calc(var(--jumbotr-title-padding) - 40px);
+  user-select: none;
+  background: white;
+  z-index: 1000; }
 
 .jumbotron.page-title h1 {
   font-family: var(--font-scnd);
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 0px;
-  color: white; }
+  color: var(--accent-grey); }
 
 .jumbotron.page-title hr {
   display: none;
@@ -74,17 +94,29 @@ h1.section {
 
 /* PAGE TITLE end */
 /* INPUT */
-input[type="text"] {
+input[type="text"], select {
   border: none;
   border-bottom: 2px solid var(--accent-main);
-  background-color: transparent; }
+  background-color: transparent;
+  border-radius: 0px !important;
+  -webkit-appearance: unset;
+  appearance: unset; }
 
 input[type="text"]:focus, input[type="text"]:active {
   border-bottom-color: var(--accent-grey); }
 
+select::after {
+  content: url(https://gdmgent-1819-nmd2.github.io/1819-crowdfunding-gdm-1718-lenndery/assets/lib/feather/chevrons-down.svg);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1000;
+  width: 10px;
+  height: 10px; }
+
 /* INPUT end*/
 .container.section {
-  margin-top: 65px; }
+  margin-top: 40px; }
 
 .container.section-hi {
   margin-top: 100px;
@@ -100,56 +132,58 @@ footer {
   --footer-padding: 30px;
   padding-top: var(--footer-padding); }
 
-footer div.row {
-  margin-bottom: 0px; }
-
-footer div[class*="col"] {
-  margin-bottom: 30px; }
-
-footer > div.links {
-  background-color: var(--accent-main); }
-
-footer > div.logo {
-  background-color: var(--accent-grey); }
-
-footer > div > div > .row {
-  color: white; }
-
+/* footer > div.links a > svg {
+    height: 75px;
+} */
 footer > div.links > div > div > div {
   margin-bottom: 30px; }
 
+body > footer > div.links > div > div > div#sign-up > input[type="text"] {
+  width: 100%; }
+
 /* LINKS */
 footer > .links {
-  --footer-links-padding: 30px;
+  padding: 20px 30px;
+  --footer-links-padding: 40px;
   padding-top: var(--footer-links-padding);
-  padding-bottom: var(--footer-links-padding); }
+  padding-bottom: var(--footer-links-padding);
+  background-color: var(--accent-grey); }
 
-footer > .links > .container > .row > div > h4 {
-  color: black; }
-
-footer > .links > .container > .row > div > a {
-  display: block; }
-
-footer > .links > .container > .row > div > input {
-  border-bottom-color: white; }
-
-footer > .links > .container > .row > div > input::placeholder {
+footer > .links > div > .row > div > a {
   color: white; }
 
-body > footer > div.links > div > div > div:last-child {
-  margin-bottom: 0px; }
+footer > .links > div > .row > div > a {
+  display: block;
+  color: white; }
+
+#sign-up {
+  padding: 0px;
+  border: 0px; }
+
+#collapseFooterMore > div, body > footer > div.links > div > div > div > div > div  {
+  background: none;
+  border: none;
+  padding: 0px; }
+
+#collapseFooterMore > div > input {
+  border-bottom-color: white; }
+
+#collapseFooterMore > div > input:focus {
+  border-bottom-color: var(--accent-main); }
+
+#collapseFooterMore > div > input::placeholder {
+  color: var(--accent-main); }
 
 /* LOGO */
 footer > .logo {
   --footer-logo-padding: 13px;
   padding-top: var(--footer-logo-padding);
-  padding-bottom: var(--footer-logo-padding); }
+  padding-bottom: var(--footer-logo-padding);
+  background-color: var(--accent-main);
+  padding: 20px 30px; }
 
-#logo-footer {
-  margin-bottom: 15px; }
-
-#site-rights, #site-policy {
-  margin-bottom: 0px; }
+footer > div > div > .row {
+  color: white; }
 
 /* FOOTER end */
 /* BUTTONS */
@@ -403,7 +437,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   font-size: 0.7rem;
   margin-bottom: 0px; }
 
-.card.pledge > .card-body > .container > .row > .backers > .container {
+.card.pledge > .card-body > .container > .row > .backers .container {
   padding: 0px; }
 
 .backers > .container > :nth-child(2) p {
@@ -441,9 +475,75 @@ a.btn-box-flow + a.btn-box-flow::before {
   position: absolute;
   top: -10px;
   right: -10px;
-  height: fit-content; }
+  height: fit-content;
+  z-index: 200 !important; }
 
 /* PLEDGES END */
+/* ORDER */
+/* ABOUT */
+#order .about {
+  margin-bottom: 0px; }
+
+#order .about > h6 {
+  font-weight: bold; }
+
+/* FORM */
+#order .form input[type="text"] {
+  width: 100%; }
+
+#order .form select {
+  width: fit-content; }
+
+#order .form .row {
+  margin-bottom: 26px; }
+
+/* PAYMENT */
+#order .form #payment > div > div {
+  margin-right: 15px; }
+
+#order .form #payment > div > div:last-child {
+  margin-right: 0px; }
+
+#order .form #payment > div > div > img {
+  margin-left: 10px; }
+
+/* PRICE */
+#order .price {
+  background-color: var(--accent-main);
+  width: fit-content; }
+
+#order #price {
+  font-weight: 400 !important;
+  letter-spacing: 2px; }
+
+/* #order .price div[class*="col"] {
+    padding: 0px;
+} */
+#order .price div[class*="col"] > p {
+  line-height: 10px;
+  margin-left: 6px;
+  font-size: 0.7rem;
+  transform: translateY(6px); }
+
+/* BACKERS */
+#order .backers {
+  padding: 0px; }
+
+#order .backers .row {
+  margin-bottom: 0px; }
+
+#order .backers h6 {
+  font-family: var(--font-scnd);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 0.7rem;
+  margin-bottom: 0px; }
+
+#order .backers p {
+  font-size: 19.6px; }
+
+/* ORDER end */
 /* TESTIMONIAL */
 #testimonials * {
   border-radius: 0px; }
@@ -563,7 +663,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   font-size: 16px;
   color: var(--accent-main); }
 
-/* TESTMONIAL END */
+/* TESTMONIAL end */
 /* JUMBROTRON VIDEO */
 .jumbotron.header-video {
   position: relative;
@@ -898,12 +998,6 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
     padding-right: 20px; }
 
   footer > div.links > div > div > div {
-    margin-bottom: 0px; }
-
-  footer > div.logo > div > div > div {
-    margin-bottom: 0px; }
-
-  footer div[class*="col"] {
     margin-bottom: 0px; } }
 @media (min-width: 768px) {
   .col.banner-gradient {

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Order &mdash; Nomatic Travelbag</title>
+    <!--<link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/lib/ce/elements.css">
+<link rel="stylesheet" href="assets/lib/ce/fonts.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/css/app.css">
+    <script src="https://ce.lennertderyck.be/library/elements.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+</head>
+    <body>
+        <nav id="navbarTop" class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-offset="100px">
+    <a class="navbar-brand " href="/1819-crowdfunding-gdm-1718-lenndery/index">
+        <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic.svg" alt="logo nomatic" height="30px">
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-toggler-vert"></div>
+        <div class="navbar-toggler-horz"></div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/sponsor">sponsor</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/about">about</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/testimonials">testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/faq">faq</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/order">order</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .nav-item > a[href$="/order/super-early-bird"] {
+        position: relative !important;
+        color: black !important;
+        font-weight: bolder !important;
+    }
+
+    .nav-item > a[href$="/order/super-early-bird"]::after {
+        position: absolute !important;
+        bottom: -1px !important;
+        left: 50% !important;
+        height: 7px !important;
+        width: 7px !important;
+        border-radius: 120px !important;
+        background-color: var(--primary) !important;
+    }
+</style>
+        <div id="pageTitle" class="jumbotron jumbotron-fluid page-title sticky-top">
+    <div class="container animated slideInUp faster">
+        <h1 class="display-5">Order</h1>
+        <hr>
+    </div>
+</div>
+<div class="page-content">
+    <div id="pledge" class="container section">
+    <h1 class="display-4">Back our project</h1>
+    <div class="row">
+        <div class="col">
+            <div class="accordion" id="pledge-list">
+                <div class="card pledge">
+                    <div class="card-body">
+                        <div class="container about">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
+                                    <h1>€149</h1>
+                                    <h4>Super Early Bird</h4>
+                                </div>
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
+                                    <h6>One NOMATIC Travel Bag Set</h6>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
+                                </div>
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>expected to ship</h6>
+                                                <p>Janurary</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>backers</h6>
+                                                <p>1500</p>
+                                            </div>
+                                            <div class="col">
+                                                <h6>available</h6>
+                                                <p>0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pledge-list">
+                        <div class="card-body container">
+                            <div class="row">
+                                <div class="col-8 form">
+                                    <div class="row">
+                                        <div class="col offset-4">
+                                            <h3>Pledge</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Country</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Name</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Postal code</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Adress</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 txt-r">Appartment,<br>suite, etc.</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Email</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Phone</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Payment</div>
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col offset-6">
+                                            <a href="#" class="btn-box-flow">pledge</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Payment information</h6>
+                                    <p class="note">
+                                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                                    </p>
+                                    <p class="note">
+                                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card pledge collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <div class="card-body">
+                        <div class="container about">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
+                                    <h1>€159</h1>
+                                    <h4>Early Bird</h4>
+                                </div>
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
+                                    <h6>One NOMATIC Travel Bag Set</h6>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
+                                </div>
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>expected to ship</h6>
+                                                <p>Janurary</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>backers</h6>
+                                                <p>1500</p>
+                                            </div>
+                                            <div class="col">
+                                                <h6>available</h6>
+                                                <p>0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#pledge-list">
+                        <div class="card-body container">
+                            <div class="row">
+                                <div class="col-8 form">
+                                    <div class="row">
+                                        <div class="col offset-4">
+                                            <h3>Pledge</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Country</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Name</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Postal code</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Adress</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 txt-r">Appartment,<br>suite, etc.</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Email</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Phone</div>
+                                        <div class="col-8"><input type="text"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 req txt-r">Payment</div>
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
+                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col offset-6">
+                                            <a href="#" class="btn-box-flow">pledge</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Payment information</h6>
+                                    <p class="note">
+                                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                                    </p>
+                                    <p class="note">
+                                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="badge-popular" class="badge badge-secondary font-scnd"><h5 class="no-margin-b">Popular</h5></div>
+                </div>
+
+                <div class="card pledge collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <div class="card-body">
+                        <div class="container about">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-3 price">
+                                    <h1>€179</h1>
+                                    <h4>Early Bird</h4>
+                                </div>
+                                <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
+                                    <h6>One NOMATIC Travel Bag Set</h6>
+                                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
+                                </div>
+                                <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>expected to ship</h6>
+                                                <p>Janurary</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>backers</h6>
+                                                <p>1500</p>
+                                            </div>
+                                            <div class="col">
+                                                <h6>available</h6>
+                                                <p>0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#pledge-list">
+                        <div class="card-body container">
+                            <div class="row">
+                                <div class="col-8 form">
+                                    <div class="row no-margin-b">
+                                        <div class="col offset-4">
+                                            <h3>Pledge</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col offset-4">
+                                            <h1 class="font-main display-3" style="font-weight: 700;">Thanks for<br>backing us!</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col offset-4">
+                                            <h5><strong>We successfully recieved<br>your pledge</strong></h5>
+                                            <br>
+                                            <h5>You will get a confirmation email with the details of your pledge.</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row no-margin-b">
+                                        <div class="col offset-4">
+                                            <a href="" class="underlined">share your pledge</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Payment information</h6>
+                                    <p class="note">
+                                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                                    </p>
+                                    <p class="note">
+                                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col banner">
+                    <h5>Back our project 
+                        <br>with a custom pledge</h5>
+                    <a class="btn underlined" href="#">
+                        pledge
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var offsetHeightNav = document.getElementById('navbarTop').offsetHeight;
+    var pageTitleOffset = '40' + 'px';
+    document.getElementById('pageTitle').style.top = pageTitleOffset;
+</script>
+        <footer>
+    <div class="links">
+        <div class="container-fluid">
+            <div class="row mb-0 d-flex align-items-center">
+                <div class="col-sm-12 col-md-2 mr-auto">
+                    <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic_white.svg" alt="Logo nomatic">
+                </div>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">About</a>
+                </div>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">Support</a>
+                </div>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">More</a>
+                </div>
+                
+                <div class="col-sm-6 col-md-auto d-flex flex-row">
+                    <div class="btn col-sm-6 col-md-auto uppc txt-m-scnd" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
+                        Sign up
+                    </div>
+                </div>
+                <div class="collapse" id="collapseFooterMore">
+                    <div class="col-sm-6 col-md-auto">
+                        <div class="card card-body">
+                            <input type="text" placeholder="E-mail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logo">
+        <div class="container-fluid">
+            <div class="row mb-0 d-flex justify-content-between align-items-center">
+                <div class="col-sm-12 col-md-auto d-flex">
+                    <p class="mb-0">© 2018 Nomatic &mdash; All rights reserved</p>
+                </div>
+                <div class="col-sm-12 col-md-auto txt-sm-scnd">
+                    <a href="">Cookie policy</a>
+                    <a class="ml-3" href="">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+    feather.replace()
+</script>
+        <!--<script src="assets/lib/bootstrap/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="assets/lib/bootstrap/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="assets/lib/bootstrap/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+    </body>
+</html>
