@@ -12,11 +12,12 @@
     <script src="https://ce.lennertderyck.be/library/elements.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
 </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-offset="100px">
+        <nav id="navbarTop" class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-offset="100px">
     <a class="navbar-brand " href="/1819-crowdfunding-gdm-1718-lenndery/index">
-        <img src="./assets/images/logo_nomatic.svg" alt="logo nomatic" height="30px">
+        <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic.svg" alt="logo nomatic" height="30px">
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-toggler-vert"></div>
@@ -60,7 +61,7 @@
         background-color: var(--primary) !important;
     }
 </style>
-        <div class="jumbotron jumbotron-fluid page-title">
+        <div id="pageTitle" class="jumbotron jumbotron-fluid page-title sticky-top">
     <div class="container animated slideInUp faster">
         <h1 class="display-5">Order</h1>
         <hr>
@@ -68,95 +69,21 @@
 </div>
 <div class="page-content">
     <div id="order" class="container section">
-    <div class="row">
-        <div class="col-8">
-            <div class="row about">
-                <div class="offset-4 col about mb-5">
-                    <h1 class="mb-4">Early Bird</h1>
-                    <h6>One NOMATIC Travel Bag Set</h6>
-                    <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
-                </div>
-            </div>
-            <div class="row form">
-                <div class="col">
-                    <div class="row mb-3">
-                        <div class="col offset-4"><h3>Pledge</h3></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 req txt-r">Country</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 req txt-r">Name</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 req txt-r">Postal code</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 req txt-r">Adress</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 txt-r">Appartment,<br>suite, etc.</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 req txt-r">Email</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 req txt-r">Phone</div>
-                        <div class="col-8"><input type="text"></div>
-                    </div>
-                    <div id="payment" class="row">
-                        <div class="col-4 req txt-r">Payment</div>
-                        <div class="col-8 d-flex flex-row">
-                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_banccontact.svg" height="32px"></div>
-                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_mastercard.svg" height="32px"></div>
-                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_paypal.svg" height="20px;"></div>       
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col offset-6">
-                            <a href="#" class="btn-box-flow">pledge</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div class="row mb-4">
+        <div class="col offset-2 about">
+            <h1 class="mb-4">Early Bird</h1>
+            <h6>One NOMATIC Travel Bag Set</h6>
+            <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
         </div>
         <div class="col-4">
-            <div id="price" class="row">
-                <div class="col">
-                    <h2 class="font-scnd">€159</h2>
+            <div class="row price mb-4">
+                <div class="col d-flex align-items-center">
+                    <h1 id="price" class="font-scnd display-5 mb-0 py-2">€159</h1>
+                    <p class="mb-0 font-scnd uppc lspacing-1">shipping <br>incl.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h6>Payment information</h6>
-                    <p class="note">
-                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
-                    </p>
-                    <p class="note">
-                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
-                    </p>   
-                </div>
-            </div>
-        </div>
-</div>
-</div>
-
-<div id="order" class="container about">
-    <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-3 price">
-            <h1>€149</h1>
-        </div>
-        <div class="col-sm-12 col-md-8 col-lg-6 mb-3 mb-md-0 description">
-            
-        </div>
-        <div class="col-sm-12 col-lg-3 offset-md-4 offset-lg-0 backers">
-            <div class="container">
+            <div class="container backers">
                 <div class="row">
                     <div class="col">
                         <h6>expected to ship</h6>
@@ -176,121 +103,167 @@
             </div>
         </div>
     </div>
-</div>
 
-<div id="order" class="container section">
-    <h1 class="display-4">Back our project</h1>
     <div class="row">
         <div class="col">
-            <div class="accordion" id="pledge-list">
-                <div class="card pledge">
-                    <div class="card-body">
-                        
+            <div class="row form">
+                <div class="col-8">
+                    <div class="row mb-3">
+                        <div class="col offset-3"><h3>Pledge</h3></div>
                     </div>
-                    <div>
-                        <div class="card-body container">
-                            <div class="row">
-                                <div class="col-8 form">
-                                    <div class="row">
-                                        <div class="col offset-4">
-                                            <h3>Pledge</h3>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Country</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Name</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Postal code</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Adress</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 txt-r">Appartment,<br>suite, etc.</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Email</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Phone</div>
-                                        <div class="col-8"><input type="text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 req txt-r">Payment</div>
-                                        <div class="col-8 d-flex flex-row">
-                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_banccontact.svg" height="32px"></div>
-                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_mastercard.svg" height="32px"></div>
-                                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./assets/images/logo_paypal.svg" height="20px;"></div>       
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col offset-6">
-                                            <a href="#" class="btn-box-flow">pledge</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <h6>Payment information</h6>
-                                    <p class="note">
-                                        If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
-                                    </p>
-                                    <p class="note">
-                                        Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
-                                    </p>    
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-3 req txt-r">Country</div>
+                        <div class="col-9">
+                            <select>
+                                <option value="GB">United Kingdom</option>
+                                <option value="AL">Albania</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AT">Austria</option>
+                                <option value="BY">Belarus</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="HR">Croatia (Hrvatska)</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="FR">France</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="DE">Germany</option>
+                                <option value="GR">Greece</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IT">Italy</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MK">Macedonia</option>
+                                <option value="MT">Malta</option>
+                                <option value="MD">Moldova</option>
+                                <option value="MC">Monaco</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="RO">Romania</option>
+                                <option value="SM">San Marino</option>
+                                <option value="RS">Serbia</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="ES">Spain</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="DK">Denmark</option>
+                                <option value="EE">Estonia</option>
+                                <option value="FO">Faroe Islands</option>
+                                <option value="FI">Finland</option>
+                                <option value="GL">Greenland</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IE">Ireland</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="NO">Norway</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 req txt-r">Name</div>
+                        <div class="col-9"><input type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 req txt-r">Postal code</div>
+                        <div class="col-9"><input type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 req txt-r">Adress</div>
+                        <div class="col-9"><input type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 txt-r">Appartment,<br>suite, etc.</div>
+                        <div class="col-9"><input type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 req txt-r">Email</div>
+                        <div class="col-9"><input type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 req txt-r">Phone</div>
+                        <div class="col-9"><input type="text"></div>
+                    </div>
+                    <div id="payment" class="row">
+                        <div class="col-3 req txt-r">Payment</div>
+                        <div class="col-9 d-flex flex-row">
+                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_banccontact.svg" height="32px"></div>
+                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_mastercard.svg" height="32px"></div>
+                            <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_paypal.svg" height="20px;"></div>       
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col offset-6">
+                            <a href="#" class="btn-box-flow">pledge</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                        <h6>Payment information</h6>
+                        <p class="note">
+                            If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                        </p>
+                        <p class="note">
+                            Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.
+                        </p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var offsetHeightNav = document.getElementById('navbarTop').offsetHeight;
+    var pageTitleOffset = '40' + 'px';
+    document.getElementById('pageTitle').style.top = pageTitleOffset;
+</script>
+        <footer>
+    <div class="links">
+        <div class="container-fluid">
+            <div class="row mb-0 d-flex align-items-center">
+                <div class="col-sm-12 col-md-2 mr-auto">
+                    <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic_white.svg" alt="Logo nomatic">
+                </div>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">About</a>
+                </div>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">Support</a>
+                </div>
+                <div class="col-sm-6 col-md-auto">
+                    <a class="font-scnd uppc txt-m-scnd" href="">More</a>
+                </div>
+                
+                <div class="col-sm-6 col-md-auto d-flex flex-row">
+                    <div class="btn col-sm-6 col-md-auto uppc txt-m-scnd" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
+                        Sign up
+                    </div>
+                </div>
+                <div class="collapse" id="collapseFooterMore">
+                    <div class="col-sm-6 col-md-auto">
+                        <div class="card card-body">
+                            <input type="text" placeholder="E-mail">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-        <footer>
-    <div class="links">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-3">
-                    <h4>About</h4>
-                    <a href="">About us</a>
-                    <a href="">Press</a>
-                    <a href="">Status</a>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <h4>Support</h4>
-                    <a href="">FAQ</a>
-                    <a href="">Help center</a>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <h4>More</h4>
-                    <a href="">Nomatic on Kickstarter</a>
-                    <a href="">Nomatic on Indiegogo</a>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <h4>Sign up!</h4>
-                    <input type="text" placeholder="E-mail">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="logo">
-        <div class="container">
-            <div class="row">
-                <div class="col-2 col-sm-12">
-                    <img src="./assets/images/logo_nomatic_white.svg" height="20px" alt="">
+        <div class="container-fluid">
+            <div class="row mb-0 d-flex justify-content-between align-items-center">
+                <div class="col-sm-12 col-md-auto d-flex">
+                    <p class="mb-0">© 2018 Nomatic &mdash; All rights reserved</p>
                 </div>
-                <div class="col-4">© 2018 Nomatic &nbsp; All rights reserved</div>
-                <div class="col">Cookie policy Privacy policy</div>
+                <div class="col-sm-12 col-md-auto txt-sm-scnd">
+                    <a href="">Cookie policy</a>
+                    <a class="ml-3" href="">Privacy policy</a>
+                </div>
             </div>
         </div>
     </div>

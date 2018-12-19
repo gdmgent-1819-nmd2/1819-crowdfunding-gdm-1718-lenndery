@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --accent-main: #c6c6c6;
   --accent-grey: #757575;
@@ -13,7 +14,8 @@
   --col-gradient-small-btn-color: #703BAC;
   --col-gradient-wide-btn-color: #EC2F4B;
   --border: 2px solid var(--accent-main);
-  --shadow: 0px 0px 26px 4.73px rgba(0,0,0,0.09); }
+  --shadow: 0px 0px 26px 4.73px rgba(0,0,0,0.09);
+  --navbar-height: fit-content; }
 
 * {
   font-family: var(--font-main);
@@ -48,21 +50,39 @@ p.note {
 h1.section {
   font-weight: 600; }
 
+.sm-scnd, .txt-m-scnd, .txt-sm-scnd, .txt-xsm-scnd {
+  font-family: var(--font-scnd);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1rem; }
+
+.txt-m-scnd {
+  font-size: 1rem; }
+
+.txt-sm-scnd {
+  font-size: 0.85rem; }
+
+.txt-xsm-scnd {
+  font-size: 0.7rem; }
+
 /* PAGE TITLE */
 .jumbotron.page-title {
-  --jumbotr-title-padding: 30px;
-  background-color: #acacac;
+  --jumbotr-title-padding: 60px;
+  background-color: transparent;
   margin-bottom: 0px;
   padding-top: var(--jumbotr-title-padding);
-  padding-bottom: var(--jumbotr-title-padding);
-  user-select: none; }
+  padding-bottom: calc(var(--jumbotr-title-padding) - 40px);
+  user-select: none;
+  background: white;
+  z-index: 1000; }
 
 .jumbotron.page-title h1 {
   font-family: var(--font-scnd);
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 0px;
-  color: white; }
+  color: var(--accent-grey); }
 
 .jumbotron.page-title hr {
   display: none;
@@ -74,17 +94,29 @@ h1.section {
 
 /* PAGE TITLE end */
 /* INPUT */
-input[type="text"] {
+input[type="text"], select {
   border: none;
   border-bottom: 2px solid var(--accent-main);
-  background-color: transparent; }
+  background-color: transparent;
+  border-radius: 0px !important;
+  -webkit-appearance: unset;
+  appearance: unset; }
 
 input[type="text"]:focus, input[type="text"]:active {
   border-bottom-color: var(--accent-grey); }
 
+select::after {
+  content: url(https://gdmgent-1819-nmd2.github.io/1819-crowdfunding-gdm-1718-lenndery/assets/lib/feather/chevrons-down.svg);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1000;
+  width: 10px;
+  height: 10px; }
+
 /* INPUT end*/
 .container.section {
-  margin-top: 65px; }
+  margin-top: 40px; }
 
 .container.section-hi {
   margin-top: 100px;
@@ -100,42 +132,58 @@ footer {
   --footer-padding: 30px;
   padding-top: var(--footer-padding); }
 
-footer > div.links {
-  background-color: var(--accent-main); }
-
-footer > div.logo {
-  background-color: var(--accent-grey); }
-
-footer > div > div > .row {
-  margin-bottom: 10px !important;
-  color: white; }
-
+/* footer > div.links a > svg {
+    height: 75px;
+} */
 footer > div.links > div > div > div {
   margin-bottom: 30px; }
 
+body > footer > div.links > div > div > div#sign-up > input[type="text"] {
+  width: 100%; }
+
 /* LINKS */
 footer > .links {
-  --footer-links-padding: 30px;
+  padding: 20px 30px;
+  --footer-links-padding: 40px;
   padding-top: var(--footer-links-padding);
-  padding-bottom: var(--footer-links-padding); }
+  padding-bottom: var(--footer-links-padding);
+  background-color: var(--accent-grey); }
 
-footer > .links > .container > .row > div > h4 {
-  color: black; }
+footer > .links > div > .row > div > a {
+  color: white; }
 
-footer > .links > .container > .row > div > a {
-  display: block; }
+footer > .links > div > .row > div > a {
+  display: block;
+  color: white; }
 
-footer > .links > .container > .row > div > input {
+#sign-up {
+  padding: 0px;
+  border: 0px; }
+
+#collapseFooterMore > div, body > footer > div.links > div > div > div > div > div  {
+  background: none;
+  border: none;
+  padding: 0px; }
+
+#collapseFooterMore > div > input {
   border-bottom-color: white; }
 
-footer > .links > .container > .row > div > input::placeholder {
-  color: white; }
+#collapseFooterMore > div > input:focus {
+  border-bottom-color: var(--accent-main); }
+
+#collapseFooterMore > div > input::placeholder {
+  color: var(--accent-main); }
 
 /* LOGO */
 footer > .logo {
   --footer-logo-padding: 13px;
   padding-top: var(--footer-logo-padding);
-  padding-bottom: var(--footer-logo-padding); }
+  padding-bottom: var(--footer-logo-padding);
+  background-color: var(--accent-main);
+  padding: 20px 30px; }
+
+footer > div > div > .row {
+  color: white; }
 
 /* FOOTER end */
 /* BUTTONS */
@@ -428,7 +476,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   top: -10px;
   right: -10px;
   height: fit-content;
-  z-index: 3000 !important; }
+  z-index: 200 !important; }
 
 /* PLEDGES END */
 /* ORDER */
@@ -442,6 +490,9 @@ a.btn-box-flow + a.btn-box-flow::before {
 /* FORM */
 #order .form input[type="text"] {
   width: 100%; }
+
+#order .form select {
+  width: fit-content; }
 
 #order .form .row {
   margin-bottom: 26px; }
@@ -457,46 +508,31 @@ a.btn-box-flow + a.btn-box-flow::before {
   margin-left: 10px; }
 
 /* PRICE */
-#order #price:first-child h2 {
-  font-weight: 500;
+#order .price {
+  background-color: var(--accent-main);
+  width: fit-content; }
+
+#order #price {
+  font-weight: 400 !important;
   letter-spacing: 2px; }
 
-/* CARD PLEDGE PRICE */
-.card.pledge > .card-body > .container > .row > .price h1 {
-  font-family: var(--font-scnd) !important;
-  letter-spacing: 1px;
-  font-weight: 400 !important;
-  font-size: 4rem; }
+/* #order .price div[class*="col"] {
+    padding: 0px;
+} */
+#order .price div[class*="col"] > p {
+  line-height: 10px;
+  margin-left: 6px;
+  font-size: 0.7rem;
+  transform: translateY(6px); }
 
-.card.pledge > .card-body > .container > .row > .price h3 {
-  font-family: var(--font-main);
-  letter-spacing: 1px;
-  font-weight: 400; }
+/* BACKERS */
+#order .backers {
+  padding: 0px; }
 
-/* CARD PLEDGE DESCRIPTION */
-.card.pledge > .card-body > .container .row {
+#order .backers .row {
   margin-bottom: 0px; }
 
-.card.pledge > .card-body > .container > .row > .description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
-
-.card.pledge > .card-body > .container > .row > .description p {
-  font-size: 1rem;
-  margin-bottom: 0px; }
-
-.card.pledge > .card-body > .container > .row > .description h6 {
-  font-weight: bold; }
-
-/* CARD PLEDGE BACKERS */
-.card.pledge > .card-body > .container > .row > .backers {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: white; }
-
-.card.pledge > .card-body > .container > .row > .backers h6 {
+#order .backers h6 {
   font-family: var(--font-scnd);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -504,46 +540,8 @@ a.btn-box-flow + a.btn-box-flow::before {
   font-size: 0.7rem;
   margin-bottom: 0px; }
 
-.card.pledge > .card-body > .container > .row > .backers .container {
-  padding: 0px; }
-
-.backers > .container > :nth-child(2) p {
-  margin-bottom: 0px; }
-
-.backers > .container > :nth-child(2) {
-  flex-wrap: nowrap; }
-
-/* CARD PLEDGE FORM */
-.card.pledge > :nth-child(2) > .card-body {
-  padding-top: 60px; }
-
-.card.pledge > div > .container > .row > .form > .row {
-  margin-bottom: 26px; }
-
-.card.pledge > div > .container > .row > .form input[type="text"] {
-  width: 100%; }
-
-.card.pledge > div > .container > .row > .form > .row:nth-child(1) > .col > h3 {
-  text-align: left !important; }
-
-.req::after {
-  content: '*';
-  color: #cf0606;
-  margin-left: 5px; }
-
-#collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div {
-  margin-right: 15px; }
-
-#collapseOne > div > div > div.col-8.form > div:nth-child(9) > div.col-8.d-flex.flex-row > div > img {
-  margin-left: 10px; }
-
-/* BADGE */
-#badge-popular {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  height: fit-content;
-  z-index: 3000 !important; }
+#order .backers p {
+  font-size: 19.6px; }
 
 /* ORDER end */
 /* TESTIMONIAL */

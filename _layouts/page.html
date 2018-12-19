@@ -1,7 +1,7 @@
 ---
 layout   : default
 ---
-<div class="jumbotron jumbotron-fluid page-title">
+<div id="pageTitle" class="jumbotron jumbotron-fluid page-title sticky-top">
     <div class="container animated slideInUp faster">
         <h1 class="display-5">{{ page.title }}</h1>
         <hr>
@@ -10,3 +10,8 @@ layout   : default
 <div class="page-content">
     {{ content }}
 </div>
+<script>
+    var offsetHeightNav = document.getElementById('navbarTop').offsetHeight;
+    var pageTitleOffset = '40' + 'px';
+    document.getElementById('pageTitle').style.top = pageTitleOffset;
+</script>
