@@ -1187,6 +1187,17 @@ h1.section {
     }
 /* BAG SWITCH end */
 
+/* ABOUT */
+    /* LEAD */
+        #about_lead .card{
+            border: none;
+        }
+
+        #about_lead .card > .card-img {
+            object-fit: cover;
+            object-position: 100% 100%; // X-axis Y-axis
+        }
+
 /* MEDIA QUERIES */
     @media (min-width: 1200px) {
         .container {

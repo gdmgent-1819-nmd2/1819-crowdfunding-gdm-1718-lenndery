@@ -982,6 +982,15 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   content: url(https://gdmgent-1819-nmd2.github.io/1819-crowdfunding-gdm-1718-lenndery/assets/lib/feather/more-vertical.svg); }
 
 /* BAG SWITCH end */
+/* ABOUT */
+/* LEAD */
+#about_lead .card {
+  border: none; }
+
+#about_lead .card > .card-img {
+  object-fit: cover;
+  object-position: 100% 100%; }
+
 /* MEDIA QUERIES */
 @media (min-width: 1200px) {
   .container {
