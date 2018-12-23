@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
   --accent-main: #c6c6c6;
+  --accent-main-hover: #e2e2e2;
   --accent-grey: #757575;
   /* --accent-1: #391E51;
   --accent-2: #3F5EFB;
@@ -19,6 +20,9 @@
 
 * {
   font-family: var(--font-main);
+  transition: 0.35s all ease; }
+
+*:hover {
   transition: 0.35s all ease; }
 
 *:focus {
@@ -65,6 +69,17 @@ h1.section {
 
 .txt-xsm-scnd {
   font-size: 0.7rem; }
+
+/* OVERLAY */
+.overlay-img {
+  position: relative; }
+
+.overlay-txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 /* PAGE TITLE */
 .jumbotron.page-title {
@@ -300,6 +315,7 @@ a.btn-box.btn-light:hover {
 /* BUTTON UNDERLINED */
 a.underlined {
   box-sizing: content-box;
+  display: block;
   position: relative !important;
   all: unset;
   font-family: var(--font-scnd);
@@ -309,6 +325,7 @@ a.underlined {
   border-bottom: 2.3px solid black;
   padding: calc(18px - 5px) 0px;
   width: fit-content;
+  height: fit-content;
   cursor: pointer;
   transition: 0.2s all ease-in-out; }
 
@@ -862,6 +879,28 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   transform: rotate(0deg);
   transition: 0.2s all ease-in-out; }
 
+/* DROPDOWN */
+.dropdown-menu {
+  padding: 0px;
+  width: fit-content;
+  overflow-x: hidden;
+  border: none;
+  border-radius: 0px;
+  background-color: var(--accent-main); }
+
+.dropdown-divider {
+  --dropdown-div-spacing: 5px;
+  margin-top: var(--dropdown-div-spacing);
+  margin-bottom: var(--dropdown-div-spacing); }
+
+.dropdown-menu > .dropdown-item {
+  padding: 8px 11px;
+  width: 100%;
+  background-color: var(--accent-main); }
+
+.dropdown-menu > .dropdown-item:hover {
+  background-color: var(--accent-main-hover); }
+
 /* NAVBAR end */
 /* SLIDER */
 #carousel-packing {
@@ -984,13 +1023,14 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
 /* BAG SWITCH end */
 /* ABOUT */
 /* LEAD */
-#about_lead .card {
-  border: none; }
-
-#about_lead .card > .card-img {
+#about_lead img {
   object-fit: cover;
   object-position: 100% 100%; }
 
+#about_lead > .overlay-txt {
+  height: 100%; }
+
+/* ABOUT end */
 /* MEDIA QUERIES */
 @media (min-width: 1200px) {
   .container {

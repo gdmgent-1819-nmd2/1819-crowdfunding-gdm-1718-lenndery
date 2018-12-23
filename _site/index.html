@@ -26,8 +26,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/sponsor">sponsor</span></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/1819-crowdfunding-gdm-1718-lenndery/sponsor" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    sponsor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/super-early-bird">super early bird</a>
+                    <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/early-bird">early bird</a>
+                    <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/double-pledge">double pledge</a>
+                    <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/sponsor"><strong class="font-scnd">view more</strong></a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/about">about</a>
@@ -37,10 +45,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/faq">faq</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/1819-crowdfunding-gdm-1718-lenndery/order">order</a>
-            </li>
+            </li>           
         </ul>
     </div>
 </nav>
@@ -52,7 +57,7 @@
         font-weight: bolder !important;
     }
 
-    .nav-item > a[href$="/index"]::after {
+    /* .nav-item > a[href$="/index"]::after {
         position: absolute !important;
         bottom: -1px !important;
         left: 50% !important;
@@ -60,7 +65,7 @@
         width: 7px !important;
         border-radius: 120px !important;
         background-color: var(--primary) !important;
-    }
+    } */
 </style>
         <div class="jumbotron jumbotron-fluid header-video">
     <div class="container-video">
