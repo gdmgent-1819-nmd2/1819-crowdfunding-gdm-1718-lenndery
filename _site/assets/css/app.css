@@ -317,11 +317,11 @@ a.underlined {
   box-sizing: content-box;
   display: block;
   position: relative !important;
-  all: unset;
   font-family: var(--font-scnd);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
+  color: black;
   border-bottom: 2.3px solid black;
   padding: calc(18px - 5px) 0px;
   width: fit-content;
@@ -332,6 +332,9 @@ a.underlined {
 a.underlined.light {
   border-bottom: 2.3px solid white;
   color: white; }
+
+a.underlined:hover {
+  color: black; }
 
 /* BUTTON BORDER GRAD */
 a.btn-border-grad {
@@ -498,58 +501,65 @@ a.btn-box-flow + a.btn-box-flow::before {
 /* PLEDGES END */
 /* ORDER */
 /* ABOUT */
-#order .about {
+div[id*="order"] .about {
   margin-bottom: 0px; }
 
-#order .about > h6 {
+div[id*="order"] .about > h6 {
   font-weight: bold; }
 
 /* FORM */
-#order .form input[type="text"] {
+div[id*="order"] .form input[type="text"] {
   width: 100%; }
 
-#order .form select {
+div[id*="order"] .form select {
   width: fit-content; }
 
-#order .form .row {
+div[id*="order"] .form .row {
   margin-bottom: 26px; }
 
 /* PAYMENT */
-#order .form #payment > div > div {
+div[id*="order"] .form #payment > div > div {
   margin-right: 15px; }
 
-#order .form #payment > div > div:last-child {
+div[id*="order"] .form #payment > div > div:last-child {
   margin-right: 0px; }
 
-#order .form #payment > div > div > img {
+div[id*="order"] .form #payment > div > div > img {
   margin-left: 10px; }
 
 /* PRICE */
-#order .price {
+div[id*="order"] .price {
   background-color: var(--accent-main);
   width: fit-content; }
 
-#order #price {
-  font-weight: 400 !important;
-  letter-spacing: 2px; }
+#order-confirm .price {
+  background-color: transparent; }
 
-/* #order .price div[class*="col"] {
+div[id*="order"] #price {
+  font-weight: 400 !important;
+  letter-spacing: 2px;
+  font-size: 2rem; }
+
+/* div[id*="order"] .price div[class*="col"] {
     padding: 0px;
 } */
-#order .price div[class*="col"] > p {
+div[id*="order"] .price div[class*="col"] > p {
   line-height: 10px;
   margin-left: 6px;
   font-size: 0.7rem;
   transform: translateY(6px); }
 
+#order-confirm .price div[class*="col"] > p {
+  transform: translateY(4px); }
+
 /* BACKERS */
-#order .backers {
+div[id*="order"] .backers {
   padding: 0px; }
 
-#order .backers .row {
+div[id*="order"] .backers .row {
   margin-bottom: 0px; }
 
-#order .backers h6 {
+div[id*="order"] .backers h6 {
   font-family: var(--font-scnd);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -557,8 +567,11 @@ a.btn-box-flow + a.btn-box-flow::before {
   font-size: 0.7rem;
   margin-bottom: 0px; }
 
-#order .backers p {
+div[id*="order"] .backers p {
   font-size: 19.6px; }
+
+hr {
+  border-top: 2px solid var(--accent-main); }
 
 /* ORDER end */
 /* TESTIMONIAL */
