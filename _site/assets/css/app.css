@@ -886,7 +886,34 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   overflow-x: hidden;
   border: none;
   border-radius: 0px;
-  background-color: var(--accent-main); }
+  background-color: var(--accent-main);
+  border: var(--border); }
+
+.dropdown-toggle.pledges::after {
+  display: none; }
+
+.dropdown-toggle.pledges div.arrow-left, .dropdown-toggle.pledges div.arrow-right {
+  width: 11px;
+  height: 2px;
+  background-color: #00000080; }
+
+.dropdown-toggle.pledges:hover div.arrow-left, .dropdown-toggle.pledges:hover div.arrow-right {
+  background-color: #000000; }
+
+div.arrow-left {
+  margin-left: 5px; }
+
+.nav-item.dropdown .dropdown-toggle.pledges div.arrow-left {
+  transform: rotate(45deg) translateX(2.8px); }
+
+.nav-item.dropdown .dropdown-toggle.pledges div.arrow-right {
+  transform: rotate(-45deg) translateX(-2.8px); }
+
+.nav-item.dropdown.show .dropdown-toggle.pledges div.arrow-left {
+  transform: rotate(-45deg) translateX(2.8px); }
+
+.nav-item.dropdown.show .dropdown-toggle.pledges div.arrow-right {
+  transform: rotate(45deg) translateX(-2.8px); }
 
 .dropdown-divider {
   --dropdown-div-spacing: 5px;
@@ -900,6 +927,9 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
 
 .dropdown-menu > .dropdown-item:hover {
   background-color: var(--accent-main-hover); }
+
+.dropdown-menu.pledges > :last-child {
+  background-color: white; }
 
 /* NAVBAR end */
 /* SLIDER */

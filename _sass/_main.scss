@@ -1074,6 +1074,41 @@ h1.section {
             border: none;
             border-radius: 0px;
             background-color: var(--accent-main);
+            border: var(--border)
+        }
+
+        .dropdown-toggle.pledges::after {
+            display: none;
+        }
+
+        .dropdown-toggle.pledges div.arrow-left, .dropdown-toggle.pledges div.arrow-right {
+            width: 11px;
+            height: 2px;
+            background-color: #00000080;
+        }
+
+        .dropdown-toggle.pledges:hover div.arrow-left, .dropdown-toggle.pledges:hover div.arrow-right {
+            background-color: #000000;
+        }
+
+        div.arrow-left {
+            margin-left: 5px;
+        }
+
+        .nav-item.dropdown .dropdown-toggle.pledges div.arrow-left {
+            transform: rotate(45deg) translateX(2.8px);
+        }
+
+        .nav-item.dropdown .dropdown-toggle.pledges div.arrow-right {
+            transform: rotate(-45deg) translateX(-2.8px);
+        }
+
+        .nav-item.dropdown.show .dropdown-toggle.pledges div.arrow-left {
+            transform: rotate(-45deg) translateX(2.8px);
+        }
+
+        .nav-item.dropdown.show .dropdown-toggle.pledges div.arrow-right {
+            transform: rotate(45deg) translateX(-2.8px);
         }
 
         .dropdown-divider {
@@ -1090,6 +1125,10 @@ h1.section {
 
         .dropdown-menu > .dropdown-item:hover {
             background-color: var(--accent-main-hover);
+        }
+
+        .dropdown-menu.pledges > :last-child {
+            background-color: white;
         }
 
 /* NAVBAR end */
@@ -1254,12 +1293,14 @@ h1.section {
         }
     }
 
+    // MEDIUM DEVICES -> LARGE DEVICES
     @media (min-width: 768px) and (max-width: 991.98px) {
         .col.banner-gradient > a.btn-box:hover {
             color: var(--col-gradient-wide-btn-color);
         }
     }
 
+    // LARGE DEVICES
     @media (min-width: 992px) {
         .col.banner-gradient > a.btn-box:hover {
             color: var(--col-gradient-wide-btn-color);
@@ -1276,12 +1317,14 @@ h1.section {
 
     }
 
+    // MEDIUM DEVICES
     @media (min-width: 768px) {
         .col.banner-gradient {
             padding: 30px 60px;
         }
     }
 
+    // SMALL DEVICES
     @media (min-width: 576px) {
         .col.banner-gradient > h2 {
             margin-bottom: 0px;
