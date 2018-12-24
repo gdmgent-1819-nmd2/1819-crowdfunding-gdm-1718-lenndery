@@ -51,13 +51,13 @@
 </nav>
 
 <style>
-    .nav-item > a[href$="/order/double-pledge"] {
+    .nav-item > a[href$="/order/custom"] {
         position: relative !important;
         color: black !important;
         font-weight: bolder !important;
     }
 
-    /* .nav-item > a[href$="/order/double-pledge"]::after {
+    /* .nav-item > a[href$="/order/custom"]::after {
         position: absolute !important;
         bottom: -1px !important;
         left: 50% !important;
@@ -75,18 +75,16 @@
 </div>
 <div class="page-content">
     <div id="order" class="container section">
-
     <div class="row mb-4">
-        <div class="col offset-2 about">
-            <h1 class="mb-4">Double Pledge</h1>
-            <h6>One NOMATIC Travel Bag Set</h6>
-            <p>This includes one Travel Bag, one Vacuum Bag and one Laundry Bag.</p>
+        <div class="col-sm-12 col-md offset-sm-0 offset-md-2 about">
+            <h1 class="mb-4">Custom pledge</h1>
+            <h6>What you'll get</h6>
+            <p>The items that you will recieve depend on the size of your pledge. We ask you to fill in your personal info so we can send you something if your pledge is big enough</p>
         </div>
-        <div class="col-4">
+        <div class="col-sm-12 col-md-4">
             <div class="row price mb-4">
-                <div class="col d-flex align-items-center">
-                    <h1 id="price" class="font-scnd display-5 mb-0 py-2">€159</h1>
-                    <p class="mb-0 font-scnd uppc lspacing-1">shipping <br>incl.</p>
+                <div class="col-2 d-flex align-items-center">
+                    <h1 id="price" class="font-scnd display-5 mb-0 py-2"><span class="mr-2">€</span><input class="d-inline light" type="number" placeholder="fill in an amount" style="width: 250px"></h1>
                 </div>
             </div>
             <div class="container backers">
@@ -95,15 +93,9 @@
                         <h6>expected to ship</h6>
                         <p>Janurary</p>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col">
                         <h6>backers</h6>
                         <p>1500</p>
-                    </div>
-                    <div class="col">
-                        <h6>available</h6>
-                        <p>0</p>
                     </div>
                 </div>
             </div>
@@ -113,13 +105,13 @@
     <div class="row">
         <div class="col">
             <div class="row form">
-                <div class="col-8">
+                <div class="col-sm-12 col-md-8">
                     <div class="row mb-3">
-                        <div class="col offset-3"><h3>Pledge</h3></div>
+                        <div class="col offset-sm-0 offset-lg-3"><h3>Pledge</h3></div>
                     </div>
                     <div class="row">
-                        <div class="col-3 req txt-r">Country</div>
-                        <div class="col-9">
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 req text-md-right">Country</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0">
                             <select>
                                 <option value="GB">United Kingdom</option>
                                 <option value="AL">Albania</option>
@@ -171,47 +163,47 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-3 req txt-r">Name</div>
-                        <div class="col-9"><input type="text"></div>
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 req text-md-right">Name</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0"><input type="text"></div>
                     </div>
                     <div class="row">
-                        <div class="col-3 req txt-r">Postal code</div>
-                        <div class="col-9"><input type="text"></div>
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 req text-md-right">Postal code</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0"><input type="text"></div>
                     </div>
                     <div class="row">
-                        <div class="col-3 req txt-r">Adress</div>
-                        <div class="col-9"><input type="text"></div>
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 req text-md-right">Adress</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0"><input type="text"></div>
                     </div>
                     <div class="row">
-                        <div class="col-3 txt-r">Appartment,<br>suite, etc.</div>
-                        <div class="col-9"><input type="text"></div>
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 text-md-right">Appartment,<br>suite, etc.</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0"><input type="text"></div>
                     </div>
                     <div class="row">
-                        <div class="col-3 req txt-r">Email</div>
-                        <div class="col-9"><input type="text"></div>
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 req text-md-right">Email</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0"><input type="text"></div>
                     </div>
                     <div class="row">
-                        <div class="col-3 req txt-r">Phone</div>
-                        <div class="col-9"><input type="text"></div>
+                        <div class="col-sm-12 col-md-3 offset-sm-0 offset-lg-0 req text-md-right">Phone</div>
+                        <div class="col-sm-10 col-md-9 offset-sm-0 offset-lg-0"><input type="text"></div>
                     </div>
                     <div id="payment" class="row">
-                        <div class="col-3 req txt-r">Payment</div>
-                        <div class="col-9 d-flex flex-row">
+                        <div class="col-sm-12 col-md-3 req text-md-right">Payment</div>
+                        <div class="col-sm-10 col-md-9 d-flex flex-row">
                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_banccontact.svg" height="32px"></div>
                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_mastercard.svg" height="32px"></div>
                             <div class="d-flex flex-row align-items-center"><input type="radio"><img src="./../assets/images/logo_paypal.svg" height="20px;"></div>       
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col offset-6">
-                            <a href="#" class="btn-box-flow">pledge</a>
+                        <div class="col offset-sm-0 offset-md-3">
+                            <a href="./confirm" class="btn-box-flow">pledge</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-12 col-md-4">
                         <h6>Payment information</h6>
                         <p class="note">
-                            If your pledge is processed successfully, you’ll receive a confirmation email at lenndery@student.arteveldehs.be.
+                            If your pledge is processed successfully, you’ll receive a confirmation email.
                         </p>
                         <p class="note">
                             Your payment method will not be charged at this time. If the project is successfully funded, your payment method will be charged $20.00 when the project ends.

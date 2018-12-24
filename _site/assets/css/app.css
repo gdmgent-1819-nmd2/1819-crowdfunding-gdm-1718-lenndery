@@ -109,9 +109,17 @@ h1.section {
 
 /* PAGE TITLE end */
 /* INPUT */
-input[type="text"], select {
+input[type], select {
   border: none;
   border-bottom: 2px solid var(--accent-main);
+  background-color: transparent;
+  border-radius: 0px !important;
+  -webkit-appearance: unset;
+  appearance: unset; }
+
+input[type].light {
+  border: none;
+  border-bottom: 2px solid white;
   background-color: transparent;
   border-radius: 0px !important;
   -webkit-appearance: unset;
@@ -906,7 +914,7 @@ button.navbar-toggler:not(.collapsed) .navbar-toggler-horz {
   display: none; }
 
 .dropdown-toggle.pledges div.arrow-left, .dropdown-toggle.pledges div.arrow-right {
-  width: 11px;
+  width: 8px;
   height: 2px;
   background-color: #00000080; }
 
@@ -917,16 +925,16 @@ div.arrow-left {
   margin-left: 5px; }
 
 .nav-item.dropdown .dropdown-toggle.pledges div.arrow-left {
-  transform: rotate(45deg) translateX(2.8px); }
+  transform: rotate(45deg) translateX(2px); }
 
 .nav-item.dropdown .dropdown-toggle.pledges div.arrow-right {
-  transform: rotate(-45deg) translateX(-2.8px); }
+  transform: rotate(-45deg) translateX(-2px); }
 
 .nav-item.dropdown.show .dropdown-toggle.pledges div.arrow-left {
-  transform: rotate(-45deg) translateX(2.8px); }
+  transform: rotate(-45deg) translateX(2px); }
 
 .nav-item.dropdown.show .dropdown-toggle.pledges div.arrow-right {
-  transform: rotate(45deg) translateX(-2.8px); }
+  transform: rotate(45deg) translateX(-2px); }
 
 .dropdown-divider {
   --dropdown-div-spacing: 5px;
