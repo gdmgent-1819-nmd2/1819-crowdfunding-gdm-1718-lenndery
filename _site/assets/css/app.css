@@ -109,7 +109,7 @@ h1.section {
 
 /* PAGE TITLE end */
 /* INPUT */
-input[type], select {
+input[type]:not([type="radio"]), select {
   border: none;
   border-bottom: 2px solid var(--accent-main);
   background-color: transparent;
@@ -117,7 +117,7 @@ input[type], select {
   -webkit-appearance: unset;
   appearance: unset; }
 
-input[type].light {
+input[type]:not([type="radio"]).light {
   border: none;
   border-bottom: 2px solid white;
   background-color: transparent;
