@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Order &mdash; Nomatic Travelbag</title>
     <link rel="shortcut icon" type='image/x-icon' href="/1819-crowdfunding-gdm-1718-lenndery/assets/favicon.ico"/>
-    <!--<link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/lib/ce/elements.css">
-<link rel="stylesheet" href="assets/lib/ce/fonts.css">-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/ce/elements.css">
+<link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/ce/fonts.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
     <link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/css/app.css">
     <script src="https://ce.lennertderyck.be/library/elements.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -34,7 +34,7 @@
                     <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/super-early-bird">super early bird</a>
                     <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/early-bird">early bird</a>
                     <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/double-pledge">double pledge</a>
-                    <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/custom"><strong class="font-scnd">custom pledge</strong></a>
+                    <a class="dropdown-item" href="/1819-crowdfunding-gdm-1718-lenndery/order/custom">custom pledge</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -78,13 +78,13 @@
     <div class="row mb-4">
         <div class="col-sm-12 col-md offset-sm-0 offset-md-2 about">
             <h1 class="mb-4">Custom pledge</h1>
-            <h6>What you'll get</h6>
-            <p>The items that you will recieve depend on the size of your pledge. We ask you to fill in your personal info so we can send you something if your pledge is big enough</p>
+            <h6>Rewards</h6>
+            <p>The reward that you'll recieve depends on the size of your pledge. We ask you to fill in your personal info so we can send your reward if your pledge is big enough</p>
         </div>
         <div class="col-sm-12 col-md-4">
             <div class="row price mb-4">
                 <div class="col-2 d-flex align-items-center">
-                    <h1 id="price" class="font-scnd display-5 mb-0 py-2"><span class="mr-2">€</span><input class="d-inline light" type="number" placeholder="fill in an amount" style="width: 250px"></h1>
+                    <h1 id="price" class="font-scnd display-5 mb-0 py-2"><span class="mr-2">€</span><input class="d-inline light" type="number" placeholder="fill in an amount" style="width: 260px"></h1>
                 </div>
             </div>
             <div class="container backers">
@@ -224,29 +224,22 @@
     <div class="links">
         <div class="container-fluid">
             <div class="row mb-0 d-flex align-items-center">
-                <div class="col-sm-12 col-md-2 mr-auto">
-                    <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic_white.svg" alt="Logo nomatic">
+                <div class="col-sm-12 col-md-auto mr-auto mb-3 mb-md-0">
+                    <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic_white.svg" alt="Logo nomatic" height="29.91px">
                 </div>
-                <div class="col-sm-6 col-md-auto">
+                <div class="col-auto col-md-auto mb-3 mb-sm-0">
                     <a class="font-scnd uppc txt-m-scnd" href="">About</a>
                 </div>
-                <div class="col-sm-6 col-md-auto">
+                <div class="col-auto col-md-auto mb-3 mb-sm-0">
                     <a class="font-scnd uppc txt-m-scnd" href="">Support</a>
                 </div>
-                <div class="col-sm-6 col-md-auto">
+                <div class="col-auto col-md-auto mb-3 mb-sm-0">
                     <a class="font-scnd uppc txt-m-scnd" href="">More</a>
                 </div>
                 
-                <div class="col-sm-6 col-md-auto d-flex flex-row">
-                    <div class="btn col-sm-6 col-md-auto uppc txt-m-scnd" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
-                        Sign up
-                    </div>
-                </div>
-                <div class="collapse" id="collapseFooterMore">
-                    <div class="col-sm-6 col-md-auto">
-                        <div class="card card-body">
-                            <input type="text" placeholder="E-mail">
-                        </div>
+                <div class="col-12 col-sm-auto mb-0 mb-md-0 d-flex flex-row align-items-start">
+                    <div class="uppc txt-m-scnd" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
+                        Sign up <input type="email" class="light ml-3" placeholder="E-mail">
                     </div>
                 </div>
             </div>
@@ -267,14 +260,14 @@
     </div>
 </footer>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script>
     feather.replace()
-</script>
-        <!--<script src="assets/lib/bootstrap/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="assets/lib/bootstrap/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="assets/lib/bootstrap/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+</script>-->
+        <script src="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
