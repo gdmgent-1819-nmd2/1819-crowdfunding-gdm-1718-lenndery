@@ -475,6 +475,7 @@ img {
             height: fit-content;
             cursor: pointer;
             transition: 0.2s all ease-in-out;
+            border-radius: 0px !important;
         }
 
         a.underlined.light {
@@ -837,6 +838,11 @@ img {
 
     .card.testimonial > .card-body {
         padding: 0px;
+    }
+
+    .card.testimonial > div > .card-body {
+        padding: 0px;
+        white-space: initial;
     }
 
     .card.testimonial > :nth-child(2) > .card-body {
