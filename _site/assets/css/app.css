@@ -32,7 +32,8 @@
   margin-bottom: 60px; }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  white-space: initial; }
+  white-space: initial;
+  font-family: var(--font-main); }
 
 a {
   all: unset;
@@ -76,6 +77,9 @@ h1.section {
 
 .txt-xsm-scnd {
   font-size: 0.7rem; }
+
+*[class*="txt"][class*="scnd"].grey {
+  color: var(--accent-main); }
 
 img {
   pointer-events: none;
@@ -568,7 +572,7 @@ a.btn-box-flow + a.btn-box-flow::before {
   top: -10px;
   right: -10px;
   height: fit-content;
-  z-index: 200 !important;
+  z-index: inherit !important;
   border-radius: 0px; }
 
 /* PLEDGES END */
