@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>FAQ &mdash; Nomatic Travelbag</title>
     <link rel="shortcut icon" type='image/x-icon' href="/1819-crowdfunding-gdm-1718-lenndery/assets/favicon.ico"/>
-    <link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/ce/elements.css">
-<link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/ce/fonts.css">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/1819-crowdfunding-gdm-1718-lenndery/assets/css/app.css">
     <script src="https://ce.lennertderyck.be/library/elements.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -75,136 +72,170 @@
 </div>
 <div class="page-content">
     <div class="container section">
-    <div class="accordion" id="testimonials-list">
-        <div class="row">
-            <div class="col banner-gradient">
-                <h2>Need help?</h2>
-                <a class="btn-box-flow" href="#">
-                    write a review
-                </a>
+    <div class="row">
+        <div class="col banner-gradient">
+            <h2>Need help?</h2>
+            <a class="btn-box-flow btn-on-bg" href="#">
+                ask something
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-3">
+            <div class="row mb-3">
+                <div class="col-12 mb-3"><h3 class="mb-0">Filter</h3></div>
+                <div class="col mb-3 d-flex flex-column align-items-start">
+                    <h5 class="mb-0 mb-lg-2 mr-3">Sort</h5>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center txt-m-scnd" id="testimonialFilterDropdown" href role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            most recent <div class="arrow-left"></div><div class="arrow-right"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="testimonialFilterDropdown">
+                            <a class="dropdown-item txt-m-scnd grey">most relevant</a>
+                            <a class="dropdown-item txt-m-scnd grey">popular</a>
+                        </div>
+                    </li>
+                </div>
+                <div class="col mb-3 d-flex flex-column align-items-start">
+                    <h5 class="mb-0 mb-lg-2 mr-3">Date</h5>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center txt-m-scnd" id="testimonialFilterDropdown" href role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            past year <div class="arrow-left"></div><div class="arrow-right"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="testimonialFilterDropdown">
+                            <a class="dropdown-item txt-m-scnd grey">this week</a>
+                            <a class="dropdown-item txt-m-scnd grey">this month</a>
+                            <a class="dropdown-item txt-m-scnd grey">this year</a>
+                            <a class="dropdown-item txt-m-scnd grey">all</a>
+                        </div>
+                    </li>
+                </div>
+                <div class="col mb-3 d-flex flex-column align-items-start">
+                    <h5 class="mb-0 mb-lg-2 mr-3">Subject</h5>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center txt-m-scnd" id="testimonialFilterDropdown" href role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            accessoiries <div class="arrow-left"></div><div class="arrow-right"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="testimonialFilterDropdown">
+                            <a class="dropdown-item txt-m-scnd grey">waterproofing</a>
+                            <a class="dropdown-item txt-m-scnd grey">payment</a>
+                            <a class="dropdown-item txt-m-scnd grey">retouring</a>
+                            <a class="dropdown-item txt-m-scnd grey">all</a>
+                        </div>
+                    </li>
+                </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="accordion testimonial" id="testimonials">
-                    <div class="card testimonial collapsed" data-rating="5" id="headingOne" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseOne" aria-expanded="false" aria-controls="testimonial-test-collapseOne">
-                        <div class="card-body">
-                            <div class="meta d-flex flex-row">
-                                <div>
-                                    <img class="profile" src="./assets/images/profiles/stan-lee.jpg"> 
-                                </div>
-                                <div>
-                                    <p class="name">Stan Lee</p>
-                                    <div class="d-flex flex-column flex-md-row">
-                                        <p class="date">3 weeks ago</p><div class="rating"></div>
-                                    </div>
-                                </div>
+        <div class="col-12 col-lg-9">
+            <input type="text" class="w-100 mb-4" placeholder="Search for help">
+            <div class="accordion testimonial mb-3" id="testimonials">
+                <div class="card testimonial collapsed" data-rating="5" id="headingOne" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseOne" aria-expanded="false" aria-controls="testimonial-test-collapseOne">
+                    <div class="card-body">
+                        <div class="meta d-flex flex-row">
+                            <div>
+                                <img class="profile" src="./assets/images/profiles/stan-lee.jpg"> 
                             </div>
-                        </div>
-                        <div id="testimonial-test-collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#testimonials">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            <div>
+                                <p class="name">Stan Lee</p>
+                                <div class="d-flex flex-column flex-md-row">
+                                    <p class="date">3 weeks ago</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card testimonial collapsed" data-rating="5" id="headingTwo" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseTwo" aria-expanded="false" aria-controls="testimonial-test-collapseTwo">
+                    <div id="testimonial-test-collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#testimonials">
                         <div class="card-body">
-                            <div class="meta d-flex flex-row">
-                                <div>
-                                    <img class="profile" src="./assets/images/profiles/peter-parker.jpg"> 
-                                </div>
-                                <div>
-                                    <p class="name">Peter Parker</p>
-                                    <div class="d-flex flex-column flex-md-row">
-                                        <p class="date">2 months ago</p><div class="rating"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                         </div>
-                        <div id="testimonial-test-collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#testimonials">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div class="card testimonial collapsed" data-rating="5" id="headingTwo" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseTwo" aria-expanded="false" aria-controls="testimonial-test-collapseTwo">
+                    <div class="card-body">
+                        <div class="meta d-flex flex-row">
+                            <div>
+                                <img class="profile" src="./assets/images/profiles/peter-parker.jpg"> 
+                            </div>
+                            <div>
+                                <p class="name">Peter Parker</p>
+                                <div class="d-flex flex-column flex-md-row">
+                                    <p class="date">2 months ago</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card testimonial collapsed" data-rating="2" id="headingThree" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseThree" aria-expanded="false" aria-controls="testimonial-test-collapseThree">
+                    <div id="testimonial-test-collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#testimonials">
                         <div class="card-body">
-                            <div class="meta d-flex flex-row">
-                                <div>
-                                    <img class="profile" src="./assets/images/profiles/tony-stark.jpg"> 
-                                </div>
-                                <div>
-                                    <p class="name">Tony Stark</p>
-                                    <div class="d-flex flex-column flex-md-row">
-                                        <p class="date">2 months ago</p><div class="rating"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                         </div>
-                        <div id="testimonial-test-collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#testimonials">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div class="card testimonial collapsed" data-rating="2" id="headingThree" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseThree" aria-expanded="false" aria-controls="testimonial-test-collapseThree">
+                    <div class="card-body">
+                        <div class="meta d-flex flex-row">
+                            <div>
+                                <img class="profile" src="./assets/images/profiles/tony-stark.jpg"> 
+                            </div>
+                            <div>
+                                <p class="name">Tony Stark</p>
+                                <div class="d-flex flex-column flex-md-row">
+                                    <p class="date">2 months ago</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card testimonial collapsed" data-rating="3" id="headingFour" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseFour" aria-expanded="false" aria-controls="testimonial-test-collapseFour">
+                    <div id="testimonial-test-collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#testimonials">
                         <div class="card-body">
-                            <div class="meta d-flex flex-row">
-                                <div>
-                                    <img class="profile" src="./assets/images/profiles/peter-quill.jpg"> 
-                                </div>
-                                <div>
-                                    <p class="name">Peter Quill</p>
-                                    <div class="d-flex flex-column flex-md-row">
-                                        <p class="date">2 months ago</p><div class="rating"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                         </div>
-                        <div id="testimonial-test-collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#testimonials">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+                <div class="card testimonial collapsed" data-rating="3" id="headingFour" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseFour" aria-expanded="false" aria-controls="testimonial-test-collapseFour">
+                    <div class="card-body">
+                        <div class="meta d-flex flex-row">
+                            <div>
+                                <img class="profile" src="./assets/images/profiles/peter-quill.jpg"> 
+                            </div>
+                            <div>
+                                <p class="name">Peter Quill</p>
+                                <div class="d-flex flex-column flex-md-row">
+                                    <p class="date">2 months ago</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card testimonial collapsed" data-rating="4" id="headingFive" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseFive" aria-expanded="false" aria-controls="testimonial-test-collapseFive">
+                    <div id="testimonial-test-collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#testimonials">
                         <div class="card-body">
-                            <div class="meta d-flex flex-row">
-                                <div>
-                                    <img class="profile" src="./assets/images/profiles/cap-am.jpg"> 
-                                </div>
-                                <div>
-                                    <p class="name">Captain</p>
-                                    <div class="d-flex flex-column flex-md-row">
-                                        <p class="date">2 months ago</p><div class="rating"></div>
-                                    </div>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card testimonial collapsed" data-rating="4" id="headingFive" type="button" data-toggle="collapse" data-target="#testimonial-test-collapseFive" aria-expanded="false" aria-controls="testimonial-test-collapseFive">
+                    <div class="card-body">
+                        <div class="meta d-flex flex-row">
+                            <div>
+                                <img class="profile" src="./assets/images/profiles/cap-am.jpg"> 
+                            </div>
+                            <div>
+                                <p class="name">Captain</p>
+                                <div class="d-flex flex-column flex-md-row">
+                                    <p class="date">2 months ago</p>
                                 </div>
                             </div>
                         </div>
-                        <div id="testimonial-test-collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#testimonials">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
+                    </div>
+                    <div id="testimonial-test-collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#testimonials">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <a class="underlined">load more</a>
-            </div>
-        </div>
-
-
-
-        <div class="row">
+            <a class="underlined mx-auto mb-5">load more</a>
             <div class="col banner-gradient">
                 <h2>Need help?</h2>
-                <a class="btn-box-flow" href="#">
-                    write a review
+                <a class="btn-box-flow btn-on-bg" href="#">
+                    ask something
                 </a>
             </div>
         </div>
@@ -220,22 +251,25 @@
     <div class="links">
         <div class="container-fluid">
             <div class="row mb-0 d-flex align-items-center">
-                <div class="col-sm-12 col-md-auto mr-auto mb-3 mb-md-0">
+                <div class="col-sm-12 col-md-auto mr-auto mb-0 mb-4 mb-lg-0">
                     <img src="/1819-crowdfunding-gdm-1718-lenndery/assets/images/logo_nomatic_white.svg" alt="Logo nomatic" height="29.91px">
                 </div>
-                <div class="col-auto col-md-auto mb-3 mb-sm-0">
-                    <a class="font-scnd uppc txt-m-scnd" href="">About</a>
-                </div>
-                <div class="col-auto col-md-auto mb-3 mb-sm-0">
-                    <a class="font-scnd uppc txt-m-scnd" href="">Support</a>
-                </div>
-                <div class="col-auto col-md-auto mb-3 mb-sm-0">
-                    <a class="font-scnd uppc txt-m-scnd" href="">More</a>
-                </div>
-                
-                <div class="col-12 col-sm-auto mb-0 mb-md-0 d-flex flex-row align-items-start">
-                    <div class="uppc txt-m-scnd" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
-                        Sign up <input type="email" class="light-grey ml-3" placeholder="E-mail">
+                <div class="col col-md-auto">
+                    <div class="row mb-0 d-flex justify-content-between">
+                        <div class="col-auto col-sm-auto mb-3 mb-sm-3 mb-md-0">
+                            <a class="font-scnd uppc txt-m-scnd" href="">About</a>
+                        </div>
+                        <div class="col-auto col-sm-auto mb-3 mb-sm-3 mb-md-0">
+                            <a class="font-scnd uppc txt-m-scnd" href="">Support</a>
+                        </div>
+                        <div class="col-auto col-sm-auto mb-3 mb-sm-3 mb-md-0">
+                            <a class="font-scnd uppc txt-m-scnd" href="">More</a>
+                        </div>
+                        <div class="col-12 col-sm-auto mb-0 d-flex flex-row align-items-start">
+                            <div class="uppc txt-m-scnd w-100" id="sign-up" type="button" data-toggle="collapse" data-target="#collapseFooterMore" aria-expanded="false" aria-controls="ccollapseFooterMore">
+                                Sign up <input type="email" class="light-grey ml-3" placeholder="E-mail" style="width: 211px;">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,14 +290,11 @@
     </div>
 </footer>
 
-        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script>
     feather.replace()
-</script>-->
-        <script src="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="/1819-crowdfunding-gdm-1718-lenndery/assets/lib/bootstrap/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</script>
     </body>
 </html>

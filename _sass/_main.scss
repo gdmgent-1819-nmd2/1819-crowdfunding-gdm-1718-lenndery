@@ -33,8 +33,8 @@
     transition: 0.35s all ease;
 }
 
-*:focus { 
-    outline:0 !important;
+*:focus, *:active, *:focus { 
+    outline: none !important;
 }
 
 .row {
@@ -55,6 +55,11 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: inherit;
+}
+
+a:active {
+    color: inherit;
 }
 
 p {
@@ -104,6 +109,10 @@ h1.section {
     color: var(--accent-main);
 }
 
+a[class*="txt"][class*="scnd"]:not(.dropdown-toggle).grey:hover {
+    color: var(--accent-grey);
+}
+
 img {
     pointer-events: none;
     user-select: none;
@@ -126,6 +135,88 @@ img {
         bottom: 0;
         left: 0;
     }
+/* OVERLAY end */
+
+/* TOGGLE ARROW */
+    .dropdown-menu {
+        padding: 0px;
+        width: fit-content;
+        overflow-x: hidden;
+        border: none;
+        border-radius: 0px;
+    }
+
+    .nav-item.dropdown {
+        list-style: none;
+    }
+
+    .nav-item.dropdown > a {
+        padding: 0px;
+        color: var(--accent-grey);
+    }
+
+    .dropdown-toggle {
+        white-space: nowrap;
+    }
+
+    .dropdown-toggle:hover {
+        color: var(--accent-main);
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    * div.arrow-left, .dropdown-toggle div.arrow-right {
+        width: 8px;
+        height: 2px;
+        background-color: var(--accent-main);
+    }
+
+    *:hover div.arrow-left, .dropdown-toggles:hover div.arrow-right {
+        background-color: var(--accent-main);
+    }
+
+    div.arrow-left {
+        margin-left: 5px;
+    }
+
+    /* DROPDOWN ARROW */
+        .nav-item.dropdown .dropdown-toggle div.arrow-left {
+            transform: rotate(45deg) translateX(2px);
+        }
+
+        .nav-item.dropdown .dropdown-toggle div.arrow-right {
+            transform: rotate(-45deg) translateX(-2px);
+        }
+
+        .nav-item.dropdown.show .dropdown-toggle div.arrow-left {
+            transform: rotate(-45deg) translateX(2px);
+        }
+
+        .nav-item.dropdown.show .dropdown-toggle div.arrow-right {
+            transform: rotate(45deg) translateX(-2px);
+        }
+
+        .dropdown-divider {
+            --dropdown-div-spacing: 5px;
+            margin-top: var(--dropdown-div-spacing);
+            margin-bottom: var(--dropdown-div-spacing);
+        }
+
+        .dropdown-menu > .dropdown-item {
+            padding: 8px 0px;
+            width: 100%;
+        }
+
+        .dropdown-menu > .dropdown-item:hover {
+            background-color: var(--accent-main-hover);
+        }
+
+        .dropdown-menu > :last-child {
+            border-top: 2px solid white;
+        }
+/* TOGGLE ARROW end */
 
 /* PAGE TITLE */
     .jumbotron.page-title {
@@ -198,56 +289,56 @@ img {
     }
 
     /* LIGHT ON GREY BG */
-    input[type]:not([type="radio"]).light-grey {
-        border: none;
-        border-bottom: 2px solid var(--accent-main);
-        background-color: transparent;
-        border-radius: 0px !important;
-        -webkit-appearance: unset;
-        appearance: unset;
-        color: white;
-        user-select: none;
-    }
+        input[type]:not([type="radio"]).light-grey {
+            border: none;
+            border-bottom: 2px solid var(--accent-main);
+            background-color: transparent;
+            border-radius: 0px !important;
+            -webkit-appearance: unset;
+            appearance: unset;
+            color: white;
+            user-select: none;
+        }
 
-    input[type]:not([type="radio"]).light-grey::placeholder {
-        color: var(--accent-main);
-    }
+        input[type]:not([type="radio"]).light-grey::placeholder {
+            color: var(--accent-main);
+        }
 
-    input[type]:not([type="radio"]).light-grey:focus, input[type]:not([type="radio"]).light-grey:active {
-        border-bottom: 2px solid white;
-    }
+        input[type]:not([type="radio"]).light-grey:focus, input[type]:not([type="radio"]).light-grey:active {
+            border-bottom: 2px solid white;
+        }
 
-    select::after {
-        content: url(https://gdmgent-1819-nmd2.github.io/1819-crowdfunding-gdm-1718-lenndery/assets/lib/feather/chevrons-down.svg);
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        z-index: 1000;
-        width: 10px;
-        height: 10px;
-    }
+        select::after {
+            content: url(https://gdmgent-1819-nmd2.github.io/1819-crowdfunding-gdm-1718-lenndery/assets/lib/feather/chevrons-down.svg);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            z-index: 1000;
+            width: 10px;
+            height: 10px;
+        }
 
     /* RADIO SELECT */
-    input[type=radio] {
-        position: relative;
-        -webkit-appearance: none;
-        border: var(--border);
-        height: 17px;
-        width: 17px;
-        border-radius: 120px;
-    }
+        input[type=radio] {
+            position: relative;
+            -webkit-appearance: none;
+            border: var(--border);
+            height: 17px;
+            width: 17px;
+            border-radius: 120px;
+        }
 
-    input[type=radio]:checked::after {
-        --input-radio-check-size: 7px;
-        content: ' ';
-        position: absolute;
-        top: calc(50% - var(--input-radio-check-size)/2);
-        left: calc(50% - var(--input-radio-check-size)/2);
-        width: var(--input-radio-check-size);
-        height: var(--input-radio-check-size);
-        background-color: var(--accent-grey);
-        border-radius: 100%;
-    }
+        input[type=radio]:checked::after {
+            --input-radio-check-size: 7px;
+            content: ' ';
+            position: absolute;
+            top: calc(50% - var(--input-radio-check-size)/2);
+            left: calc(50% - var(--input-radio-check-size)/2);
+            width: var(--input-radio-check-size);
+            height: var(--input-radio-check-size);
+            background-color: var(--accent-grey);
+            border-radius: 100%;
+        }
 /* INPUT end*/
 
 .container.section {
@@ -500,7 +591,6 @@ img {
     /* BUTTON COMBINATIONS */
         a.btn-box-flow + a.btn-box-flow {
             border-color: transparent;
-            margin-left: 32px;
         }
 
         a.btn-box-flow + a.btn-box-flow:hover {
@@ -1176,7 +1266,7 @@ img {
         }
 
     /* DROPDOWN */
-        .dropdown-menu {
+        .dropdown-menu.pledges {
             padding: 0px;
             width: fit-content;
             overflow-x: hidden;
@@ -1188,6 +1278,11 @@ img {
 
         .dropdown-toggle.pledges::after {
             display: none;
+        }
+
+        .nav-link.dropdown-toggle.pledges {
+            padding-top: 8px;
+            padding-bottom: 8px;
         }
 
         .dropdown-toggle.pledges div.arrow-left, .dropdown-toggle.pledges div.arrow-right {
@@ -1227,13 +1322,13 @@ img {
             margin-bottom: var(--dropdown-div-spacing);
         }
 
-        .dropdown-menu > .dropdown-item {
+        .dropdown-menu.pledges > .dropdown-item {
             padding: 8px 11px;
             width: 100%;
             background-color: var(--accent-main);
         }
 
-        .dropdown-menu > .dropdown-item:hover {
+        .dropdown-menu.pledges > .dropdown-item:hover {
             background-color: var(--accent-main-hover);
         }
 
@@ -1249,18 +1344,27 @@ img {
         position: relative;
     }
 
-    .carousel > h1 {
-        margin-top: 30px;
-        margin-left: 50px;
+    #carousel-packing > div > .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 300;
+    }
+
+    #carousel-packing > div > .overlay h1 {
         font-family: var(--font-scnd);
         color: white;
+        letter-spacing: 2px;
+        width: fit-content;
+        font-weight: 600;
     }
 
     #carousel-packing .carousel-nav {
         position: absolute;
-        bottom: 30px;
-        right: 60px;
+        bottom: 0px;
+        left: calc(1.5rem + 25px);
         width: fit-content;
+        z-index: 400;
     }
 
     #carousel-packing .carousel-nav > .carousel-indicators {
@@ -1274,6 +1378,17 @@ img {
         justify-content: center;
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    #carousel-packing .carousel-caption {
+        left: calc(1.5rem + 25px);
+        right: unset;
+        text-align: left;
+        z-index: 400;
+        background-color: rgba(0, 0, 0, 0.349);
+        padding: 17px 17px 10px 17px;
+        width: fit-content;
+        white-space: initial;
     }
 
     // IF ARROW IS IMG
@@ -1342,6 +1457,7 @@ img {
         --img-comp-height: 400px;
         position: relative;
         height: var(--img-comp-height); /* should be the same height as the images */
+        overflow: hidden;
     }
 
     .img-comp-container > :nth-child(3) {
