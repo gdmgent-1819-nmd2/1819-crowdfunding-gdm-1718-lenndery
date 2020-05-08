@@ -4,7 +4,7 @@
 
 # Site settings
 # ─────────────
-baseurl: /1819-crowdfunding-gdm-1718-lenndery # the subpath of your site, e.g. /blog
+baseurl: /1819-nmd1-crowdfunding # the subpath of your site, e.g. /blog
 # host   : 127.0.0.1
 # port   : 4000
 
